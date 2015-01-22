@@ -21,6 +21,9 @@ $roots_includes = array(
   'lib/gallery.php',         // Custom [gallery] modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
+  'assets/extensions/advanced-custom-fields/acf.php', // Advanced Custom Fields Extension
+  'assets/extensions/advanced-custom-fields-font-awesome/acf-font-awesome.php', // Advanced Custom Fields with Font Awesome Extension
+  'lib/custom-fields.php'
 );
 
 foreach ($roots_includes as $file) {
