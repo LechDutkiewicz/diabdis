@@ -214,9 +214,9 @@
     margin-top: 2px !important;
 }
 
-.acf_wysiwyg iframe{ 
+/*.acf_wysiwyg iframe{ 
 	min-height: 250px;
-}
+}*/
 
 .acf_wysiwyg .wp-editor-container {
 	background: #fff;

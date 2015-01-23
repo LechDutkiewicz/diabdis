@@ -22,7 +22,11 @@ $roots_includes = array(
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
   'assets/extensions/advanced-custom-fields/acf.php', // Advanced Custom Fields Extension
-  'assets/extensions/advanced-custom-fields-font-awesome/acf-font-awesome.php', // Advanced Custom Fields with Font Awesome Extension
+  'assets/extensions/acf-font-awesome/acf-font-awesome.php', // Advanced Custom Fields Font Awesome Extension
+  'assets/extensions/acf-repeater/acf-repeater.php', // Advanced Custom Fields Repeater Extension
+  'assets/extensions/acf-options-page/acf-options-page.php', // Advanced Custom Fields Repeater Extension
+  'assets/extensions/acf-categories/acf-categories.php', // Advanced Custom Fields Categories Extension
+  'assets/extensions/get-the-image/get-the-image.php', // Get the image for custom get_the_image function to retrieve images
   'lib/custom-fields.php'
 );
 

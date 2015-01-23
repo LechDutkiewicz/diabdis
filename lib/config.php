@@ -9,6 +9,22 @@ add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails com
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
 /**
+* Remove main editor from posts
+*/
+
+function reset_editor()
+{
+  global $_wp_post_type_features;
+ $post_type="post";
+ $feature = "editor";
+ if ( isset($_wp_post_type_features[$post_type][$feature]) )
+   unset($_wp_post_type_features[$post_type][$feature]);
+}
+
+add_action("init","reset_editor");
+
+
+/**
  * Configuration values
  */
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only, not Classic Analytics)
@@ -51,15 +67,15 @@ function roots_display_sidebar() {
       array(
         'is_404',
         'is_front_page'
-      ),
+        ),
       /**
        * Page template checks (via is_page_template())
        * Any of these page templates that return true won't show the sidebar
        */
       array(
         'template-custom.php'
-      )
-    );
+        )
+      );
     $display = apply_filters('roots/display_sidebar', $sidebar_config->display);
   }  
 

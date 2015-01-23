@@ -10,11 +10,19 @@
       <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
     </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
+    <nav class="collapse navbar-collapse" role="navigation" aria-labelledby="primaryLabel">
       <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
-        endif;
+      if (has_nav_menu('primary_navigation')) : ?>
+      <h2 id="primaryLabel" class="hidden">Main navigation</h2>
+      <?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
+      endif;
+      ?>
+    </nav>
+    <nav class="" role="navigation" aria-labelledby="categoryLabel">
+      <?php 
+      if ( '' != locate_template( 'templates/blog-cat-navi.php' ) ) {
+        get_template_part('templates/blog', 'cat-navi');
+      }
       ?>
     </nav>
   </div>

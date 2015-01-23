@@ -28,3 +28,27 @@ function roots_body_class($classes) {
   return $classes;
 }
 add_filter('body_class', 'roots_body_class');
+
+/**
+ * Return array with all post categories and custom fields
+ */
+
+function get_all_categories($parent = '') {
+  // Fetch for all categories
+  $args = array(
+    'hide_empty' => 0,
+    );
+  if ('' != $parent) {
+    $args['parent'] = $parent;
+  }
+  $catsList = get_terms('category', $args);
+  /*$output = array();
+  foreach ($catsList as $cat) {
+    $output[] = $cat;
+  }*/
+  return $catsList;
+}
+
+function get_children_categories($parent) {
+  return get_all_categories($parent);
+}
