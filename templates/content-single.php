@@ -1,3 +1,9 @@
+<?php
+
+if ( !defined( 'ABSPATH' ) )
+  exit( 'No direct script access allowed' ); // Exit if accessed directly
+?>
+
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>

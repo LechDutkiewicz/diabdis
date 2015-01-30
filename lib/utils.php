@@ -52,3 +52,33 @@ function get_all_categories($parent = '') {
 function get_children_categories($parent) {
   return get_all_categories($parent);
 }
+
+function render_category_link($categories = null, $menuLayout = null) {
+
+  if(!$categories) {
+    $categories = get_the_category();
+  }
+
+  foreach ($categories as $category) :
+
+    $link = get_category_link($category->term_id);
+    $title = $category->name;
+    $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
+    $icon = get_field('cat_icon', "{$category->taxonomy}_{$category->term_id}");
+
+    $output = '';
+
+    if($menuLayout)
+      $output .= "<li class='cat-menu-item'>";
+
+    $output .= "<a class='category-link' href='" . $link . "' title='" . $title . "' style='color:" . $color . "'>";
+    $output .= $icon . "<span>" . $title . "</span>";
+    $output .= "</a>";
+
+    if($menuLayout)
+      $output .= "</li>";
+
+    echo $output;
+
+  endforeach;
+}

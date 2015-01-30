@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
 <?php get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
@@ -6,8 +12,6 @@
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
-
-<div id="content">
 
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_format()); ?>
@@ -21,5 +25,3 @@
     </ul>
   </nav>
 <?php endif; ?>
-
-</div>

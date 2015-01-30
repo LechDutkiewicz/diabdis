@@ -1,363 +1,310 @@
-### 7.0.3: December 18th, 2014
-* Use `get_the_archive_title`
-* Remove `wp_title`, add title-tag theme support
-* Remove `Roots_Nav_Walker` as default for all menus
-* Update to Bootstrap 3.3.1
-* Add some base comment styling
-* Make search term `required` in search form
+## Change Log
 
-### 7.0.2: October 24th, 2014
-* Simplify comments, use core comment form and list
-* Remove HTML5 shiv from Modernizr build
-* Move JavaScript to footer
-* Update hEntry schema to use `updated` instead of `published`
-* Move variables into `main.less`
-* Add `roots_body_class` function that checks for page slug in `body_class`
-* Move `wp_footer` from footer template into `base.php`
+### upcoming (2015/01/30 14:57 +00:00)
+- [#1126](https://github.com/LechDutkiewicz/diabdis/pull/1126) Update Sidebar to fix default template check (@mikespainhower)
 
-### 7.0.1: August 15th, 2014
-* Move `<main>` and `.sidebar` markup out of PHP and into LESS
-* Define `WP_ENV` if it is not already defined
-* Only load Google Analytics in production environment
+### 7.0.3 (2014/12/18 20:18 +00:00)
+- [#1235](https://github.com/LechDutkiewicz/diabdis/pull/1235) Use get_the_archive_title (@retlehs)
+- [#1234](https://github.com/LechDutkiewicz/diabdis/pull/1234) Remove wp_title, add title-tag theme support (@retlehs)
+- [#1217](https://github.com/LechDutkiewicz/diabdis/pull/1217) Remove Roots_Nav_Walker as default for all menu (@leopuleo)
+- [#1209](https://github.com/LechDutkiewicz/diabdis/pull/1209) Bump Bootstrap to 3.3.1 (@markthethomas)
+- [#1191](https://github.com/LechDutkiewicz/diabdis/pull/1191) Unused parameters and declared properties (@alexsomeoddpilot)
+- [#1204](https://github.com/LechDutkiewicz/diabdis/pull/1204) Move wp_head() to be the last markup before </head> (@CFXd)
+- [#1199](https://github.com/LechDutkiewicz/diabdis/pull/1199) Updating npm dependencies (@kalenjohnson)
+- [#1196](https://github.com/LechDutkiewicz/diabdis/pull/1196) Store display_sidebar in static variable (@QWp6t)
+- [#1136](https://github.com/LechDutkiewicz/diabdis/pull/1136) Check for template_include passing non-strings. Fixes #1134 (@tomdxw)
+- [#1182](https://github.com/LechDutkiewicz/diabdis/pull/1182) Make search term `required` in search form. (@c2itllc)
+- [#1198](https://github.com/LechDutkiewicz/diabdis/pull/1198) Add some base comment styling (@retlehs)
+- [#1193](https://github.com/LechDutkiewicz/diabdis/pull/1193) Bump Bootstrap SemVer to 3.3.0 (@markthethomas)
 
-### 7.0.0: July 3rd, 2014
-* Updated Grunt workflow
-* Use grunt-modernizr to make a lean Modernizr build
-* Use Bower for front-end package management
-* Update to Bootstrap 3.2.0
-* Update to Modernizr 2.8.2
-* Update to jQuery 1.11.1
-* Move clean up, relative URLs, and nice search to [Soil](https://github.com/roots/soil)
-* Update LESS organization
-* Move [community translations](https://github.com/roots/roots-translations) to separate repository
+### 7.0.2 (2014/10/24 22:21 +00:00)
+- [#1180](https://github.com/LechDutkiewicz/diabdis/pull/1180) Move JavaScript to footer (@retlehs)
+- [#1181](https://github.com/LechDutkiewicz/diabdis/pull/1181) Simplify comments, use core comment form and list (@retlehs)
+- [#1175](https://github.com/LechDutkiewicz/diabdis/pull/1175) Update hEntry schema to use `updated` instead of `published` (@c2itllc)
+- [#1165](https://github.com/LechDutkiewicz/diabdis/pull/1165) Add roots_body_class function to check for page slug in body_class and add it as needed. (@Tidal-Wave)
+- [#1173](https://github.com/LechDutkiewicz/diabdis/pull/1173) Move variables into main.less in case it needs to come after other imports (e.g., Fontawesome) (@CFXd)
+- [#1157](https://github.com/LechDutkiewicz/diabdis/pull/1157) Move wp_footer() from footer template into base.php for easier customization and DRY (@CFXd)
+- [#1142](https://github.com/LechDutkiewicz/diabdis/pull/1142) Adds Bower installation instructions (@QWp6t)
 
-### 6.5.2: February 4th, 2014
-* Update to Bootstrap 3.1.0
-* Move DOM routing into an anonymous function to support jQuery noConflict
-* Update to jQuery 1.11.0
-* Add notice to theme activation, tidy activation table markup
-* Remove changing media folder from theme activation (use [Bedrock](https://github.com/roots/bedrock) for clean URLs out of the box)
-* Switch `div.main` to `main` element now that Modernizr uses the latest HTML5 Shiv
-* Update to Modernizr 2.7.0
-* Don't run JSHint on plugins (`assets/js/plugins/`)
-* Disable warnings about undefined variables (JSHint)
-* Merge in updates from HTML5 Boilerplate
-* Add JS source map (disabled by default)
-* Replace `grunt-recess` with `grunt-contrib-less`, add LESS source map support
+### 7.0.1 (2014/08/15 17:56 +00:00)
+- [#1090](https://github.com/LechDutkiewicz/diabdis/pull/1090) Move <main> and .sidebar markup out of PHP and into LESS (@CFXd)
+- [#1125](https://github.com/LechDutkiewicz/diabdis/pull/1125) Defines WP_ENV if it is not already defined. (@QWp6t)
+- [#1118](https://github.com/LechDutkiewicz/diabdis/pull/1118) updated package.json to use version 1.3.9 or greater (@LibLogic)
+- [#1113](https://github.com/LechDutkiewicz/diabdis/pull/1113) Check sidebar conditional tag exists (@Foxaii)
+- [#1105](https://github.com/LechDutkiewicz/diabdis/pull/1105) use WP HTML5 markup for captions instead of Soil (@kevinlisota)
+- [#1096](https://github.com/LechDutkiewicz/diabdis/pull/1096) Remove extra forward slash after navbar home_url() (@CFXd)
+- [#1085](https://github.com/LechDutkiewicz/diabdis/pull/1085) Make WP_ENV check a positive if statement to improve semantics and readability (@CFXd)
+- [#1083](https://github.com/LechDutkiewicz/diabdis/pull/1083) add _responsive-embed.less (@jholl)
+- [#1082](https://github.com/LechDutkiewicz/diabdis/pull/1082) Update autoprefixer map option (@fullyint)
+- [#1080](https://github.com/LechDutkiewicz/diabdis/pull/1080) Initiate the loop for template-custom.php (@fullyint)
+- [#1044](https://github.com/LechDutkiewicz/diabdis/pull/1044) Add "collapsed" default class to navbar collapse button (@CFXd)
+- [#1079](https://github.com/LechDutkiewicz/diabdis/pull/1079) Update Roots version number in bower.json (@kevinlisota)
+- [#1076](https://github.com/LechDutkiewicz/diabdis/pull/1076) Typo: Updage -> Update (@CFXd)
 
-### 6.5.1: November 5th, 2013
-* Move clean URLs to a [plugin](https://github.com/roots/roots-rewrites)
-* Update to Bootstrap 3.0.1
+### 7.0.0 (2014/07/03 16:52 +00:00)
+- [#982](https://github.com/LechDutkiewicz/diabdis/pull/982) Roots 7.0.0 (@retlehs, @Foxaii, @c2itllc, @hariadi, @JulienMelissas, @al-the-x, @ntwb)
+- [#1056](https://github.com/LechDutkiewicz/diabdis/pull/1056) Initiate the loop before the title is called on pages. (@joshlevinson)
+- [#1067](https://github.com/LechDutkiewicz/diabdis/pull/1067) Updated all instances of home_url() with esc_url() (@kalenjohnson)
+- [#1072](https://github.com/LechDutkiewicz/diabdis/pull/1072) Bump NPM package versions (@ntwb)
+- [#1066](https://github.com/LechDutkiewicz/diabdis/pull/1066) Escaping home_url (@kalenjohnson)
+- [#1065](https://github.com/LechDutkiewicz/diabdis/pull/1065) Use `get_comment_date` instead of `comment_date` (@jmslbam)
+- [#1027](https://github.com/LechDutkiewicz/diabdis/pull/1027) Move comments.php conditionals inside <section> tags to ensure comments_link() does not break (and clean up spacing) (@CFXd, @lainga9)
+- [#999](https://github.com/LechDutkiewicz/diabdis/pull/999) Author Archives title - WPML Compatibility (@ansonkao)
+- [#1058](https://github.com/LechDutkiewicz/diabdis/pull/1058) Fix is_element_empty util function. (@BastianHofmann)
+- [#1042](https://github.com/LechDutkiewicz/diabdis/pull/1042) Trigger an error when a required include fails to be included... (@al-the-x)
+- [#1050](https://github.com/LechDutkiewicz/diabdis/pull/1050) Remove footer copyright element (@iloveitaly)
+- [#1055](https://github.com/LechDutkiewicz/diabdis/pull/1055) Make `grunt watch:js` include `assets/js/plugins/**/*.js` (@al-the-x)
+- [#1049](https://github.com/LechDutkiewicz/diabdis/pull/1049) Retrieve manifest.json from local file system. Fixes  #1048 (@QWp6t)
+- [#1034](https://github.com/LechDutkiewicz/diabdis/pull/1034) Update fa_IR.po (@jaavid)
+- [#1019](https://github.com/LechDutkiewicz/diabdis/pull/1019) Using un-optimized version of modernizr in dev environment. (@JulienMelissas)
+- [#1015](https://github.com/LechDutkiewicz/diabdis/pull/1015) Fix comment log out title echo (@leoj3n)
+- [#1013](https://github.com/LechDutkiewicz/diabdis/pull/1013) Bug in roots_request_filter() (@lainga9)
+- [#1010](https://github.com/LechDutkiewicz/diabdis/pull/1010) Adding comment to reduce confusion about div tag closing in lib/comments.php (@JulienMelissas)
+- [#1006](https://github.com/LechDutkiewicz/diabdis/pull/1006) Update he_IL.po (@AmitT)
+- [#1007](https://github.com/LechDutkiewicz/diabdis/pull/1007) Add estonian translation (@ragulka)
+- [#1008](https://github.com/LechDutkiewicz/diabdis/pull/1008) Make Home and Primary Navigation translatable (@ragulka)
+- [#1003](https://github.com/LechDutkiewicz/diabdis/pull/1003) Updated Russian translation. (@artbelov)
+- [#997](https://github.com/LechDutkiewicz/diabdis/pull/997) Updated Swedish translation (@chrillep)
+- [#990](https://github.com/LechDutkiewicz/diabdis/pull/990) Use grunt-wp-assets for version task (@hariadi)
+- [#988](https://github.com/LechDutkiewicz/diabdis/pull/988) Update to Bootstrap 3.1.1 (@retlehs)
+- [#984](https://github.com/LechDutkiewicz/diabdis/pull/984) Update Malay language (@hariadi)
 
-### 6.5.0: August 23rd, 2013
-* Reference new site, [http://roots.io/](http://roots.io/)
-* Remove bundled docs, reference [http://roots.io/docs/](http://roots.io/docs/)
-* Use Bootstrap variables for media queries
-* Update to Bootstrap 3.0.0
-* Update to jQuery 1.10.2
-* Change media directory from `/assets/` to `/media/`
-* Update to Google Universal Analytics
-* Show author display name for author archives
-* Add Serbian translation
-* Remove post tags from templates
-* Remove TinyMCE valid elements tweaks (no longer necessary)
-* Remove additional widget classes
-* Move `/assets/css/less/` to `/assets/less/`
-* Add wrapper templates filter
-* Fix relative external URLs issue
+### 6.5.2 (2014/02/05 04:44 +00:00)
+- [#981](https://github.com/LechDutkiewicz/diabdis/pull/981) Fix for Hebrew .mo file (@amitwinsite)
+- [#976](https://github.com/LechDutkiewicz/diabdis/pull/976) Slovak language translation added (@PayteR)
+- [#980](https://github.com/LechDutkiewicz/diabdis/pull/980) Small changes to sr_RS (@lautreamont3)
+- [#979](https://github.com/LechDutkiewicz/diabdis/pull/979) Hebrew translation (@amitwinsite)
+- [#974](https://github.com/LechDutkiewicz/diabdis/pull/974) Bootstrap 3.1.0 (@Foxaii)
+- [#973](https://github.com/LechDutkiewicz/diabdis/pull/973) JS wrap, better comments (@Foxaii)
+- [#968](https://github.com/LechDutkiewicz/diabdis/pull/968) Add trailing slash using the $path parameter (@10w042)
+- [#972](https://github.com/LechDutkiewicz/diabdis/pull/972) Add Japanese language files (@gracix)
+- [#969](https://github.com/LechDutkiewicz/diabdis/pull/969) Update to jQuery 1.11.0 (@retlehs)
+- [#966](https://github.com/LechDutkiewicz/diabdis/pull/966) Fix avatar classes (@Foxaii)
+- [#963](https://github.com/LechDutkiewicz/diabdis/pull/963) Update Grunt to 0.4.2 (@patrickocoffeyo)
+- [#947](https://github.com/LechDutkiewicz/diabdis/pull/947) Fix gallery link option (@leoj3n)
+- [#956](https://github.com/LechDutkiewicz/diabdis/pull/956) Match wp_register_script function signature (@roscius)
+- [#942](https://github.com/LechDutkiewicz/diabdis/pull/942) Remove lang cleanup and fix dir (@swalkinshaw)
+- [#943](https://github.com/LechDutkiewicz/diabdis/pull/943) Fix relative url changes (@Foxaii)
+- [#941](https://github.com/LechDutkiewicz/diabdis/pull/941) Port support for rel urls (@Foxaii)
+- [#938](https://github.com/LechDutkiewicz/diabdis/pull/938) Fix german translation: Continued should be Weiterlesen (@meip)
+- [#936](https://github.com/LechDutkiewicz/diabdis/pull/936) Update to Bootstrap 3.0.3 (@Foxaii)
+- [#908](https://github.com/LechDutkiewicz/diabdis/pull/908) Add 10 px to the width of <figure> to avoid figure overflow (@bep)
+- [#929](https://github.com/LechDutkiewicz/diabdis/pull/929) fixed deprecated class name for unstyled lists (@HansCz)
+- [#928](https://github.com/LechDutkiewicz/diabdis/pull/928) Update Danish language files (@HansCz)
+- [#927](https://github.com/LechDutkiewicz/diabdis/pull/927) Updated spanish language to new paths (@jakobhans)
+- [#924](https://github.com/LechDutkiewicz/diabdis/pull/924) Fixed some spelling errors in the German translation files (@Okeanos)
+- [#921](https://github.com/LechDutkiewicz/diabdis/pull/921) roots_title() returns a value (@magox-git)
+- [#919](https://github.com/LechDutkiewicz/diabdis/pull/919) Updated German language files to latest version (@Okeanos)
+- [#917](https://github.com/LechDutkiewicz/diabdis/pull/917) Merge in updates from HTML5 Boilerplate (@retlehs)
+- [#916](https://github.com/LechDutkiewicz/diabdis/pull/916) Make enabling a JS source map easy (@retlehs)
+- [#914](https://github.com/LechDutkiewicz/diabdis/pull/914) Update to Bootstrap 3.0.2 (@retlehs)
+- [#913](https://github.com/LechDutkiewicz/diabdis/pull/913) Switch to grunt-contrib-less, add LESS source maps support (@retlehs)
 
-### 6.4.0: May 1st, 2013
-* Fix Theme Activation page issues
-* Fix issues with root relative URLs and rewrites on non-standard setups
-* Make sure rewrites are added to `.htaccess` immediately after activation
-* Move HTML5 Boilerplate's `.htaccess` to a [plugin](https://github.com/roots/wp-h5bp-htaccess)
-* Rename `page-custom.php` to `template-custom.php`
-* Don't warn about unwritable htaccess if that option is disabled
-* Add missing collapse class for top navbar
-* Add comment template
-* Update is_dropdown evaluation in nav walker
-* Re-organize archives template
-* Add missing comment ID
-* hNews consistency with entry-title class
-* Add `wp_title()` filter
-* Fix missing closing div in comments
-* Fix for navbar dropdowns
-* Add option for using jQuery on Google CDN
-* Correct logic in `roots_enable_root_relative_urls`
-* Add Greek translation, update Brazilian Portuguese translation
-* Update to Bootstrap 2.3.1
-* Simplify alerts
-* Remove disabled post nav links
-* Use Bootstrap media object for listing comments
-* Move Google Analytics to `lib/scripts.php`
-* Static top navbar instead of fixed
+### 6.5.1 (2013/11/05 21:13 +00:00)
+- [#912](https://github.com/LechDutkiewicz/diabdis/pull/912) Move rewrites to a plugin, Roots 6.5.1 (@retlehs)
+- [#893](https://github.com/LechDutkiewicz/diabdis/pull/893) Filter titles (@RistoNiinemets)
+- [#910](https://github.com/LechDutkiewicz/diabdis/pull/910) Update to Bootstrap 3.0.1 (@c2itllc)
+- [#907](https://github.com/LechDutkiewicz/diabdis/pull/907) Nynorsk (Norwegian) language fixes (@bep)
+- [#902](https://github.com/LechDutkiewicz/diabdis/pull/902) Italian Translation - Final Update (@leopuleo)
+- [#899](https://github.com/LechDutkiewicz/diabdis/pull/899) Correct theme activation link typo (@elkebirmed)
+- [#897](https://github.com/LechDutkiewicz/diabdis/pull/897) Update rewrites.php (@ShutterBrandon)
+- [#892](https://github.com/LechDutkiewicz/diabdis/pull/892) Update Bulgarian translation (@fingli)
+- [#883](https://github.com/LechDutkiewicz/diabdis/pull/883) Update Traditional Chinese translation (@visioncan)
+- [#873](https://github.com/LechDutkiewicz/diabdis/pull/873) Change IE conditional statement so alert appears on IE7 (@kevinlisota)
+- [#875](https://github.com/LechDutkiewicz/diabdis/pull/875) Predefine Modernizr object to avoid JSHint errors (@weslly)
+- [#872](https://github.com/LechDutkiewicz/diabdis/pull/872) Updated alert boxes to bootstrap v3 (@weslly)
+- [#863](https://github.com/LechDutkiewicz/diabdis/pull/863) Indented aside tag within conditional (@patrickocoffeyo)
+- [#868](https://github.com/LechDutkiewicz/diabdis/pull/868) Comment config.php excerpt length is in words (@jmjf)
+- [#871](https://github.com/LechDutkiewicz/diabdis/pull/871) Update Bootstrap 3 Customize URL (@i4web)
+- [#869](https://github.com/LechDutkiewicz/diabdis/pull/869) Add Arabic translation (@01walid)
+- [#856](https://github.com/LechDutkiewicz/diabdis/pull/856) Added browser live reloading to Grunt (@weslly)
+- [#864](https://github.com/LechDutkiewicz/diabdis/pull/864) Hide Google Analytics to admins to prevent obscured data. (@schrapel)
+- [#865](https://github.com/LechDutkiewicz/diabdis/pull/865) Add fonts to Nginx rewrites (@Foxaii)
+- [#861](https://github.com/LechDutkiewicz/diabdis/pull/861) Update translation in Bahasa Indonesia (@novrian)
+- [#859](https://github.com/LechDutkiewicz/diabdis/pull/859) Updated app.less version (@weslly)
+- [#858](https://github.com/LechDutkiewicz/diabdis/pull/858) Fix formatting in app.less (@leoj3n)
+- [#855](https://github.com/LechDutkiewicz/diabdis/pull/855) Fixed error with jshint's ES5 option (@weslly)
 
-### 6.3.0: February 8th, 2013
-* Update to Bootstrap 2.3.0
-* Update to jQuery 1.9.1
-* Output author title with `get_the_author()`
-* Add EditorConfig
-* Update 404 template based on H5BP
-* Update H5BP's included .htaccess
-* Don't show comments on passworded posts
-* Add `do_action('get_header')` for WooSidebars compatibility
-* Simplify entry meta
-* Allow `get_search_form()` to be called more than once per request
-* Move plugins.js and main.js to footer
-* JavaScript clean up (everything is now enqueued)
-* Remove conditional feed
-* Introduce `add_theme_support('bootstrap-gallery')`
-* Rewrites organization (introduce `lib/rewrites.php`)
-* Fix `add_editor_style` path
-* Updated translations: French, Bulgarian, Turkish, Korean
-* Enable `add_theme_support` for Nice Search
-* Replace ID's with classes
-* Add support for dynamic sidebar templates
-* Fix PHP notice on search with no results
-* Update to jQuery 1.9.0
+### 6.5.0 (2013/08/23 04:48 +00:00)
+- [#852](https://github.com/LechDutkiewicz/diabdis/pull/852) Roots 6.5.0 (@retlehs)
+- [#851](https://github.com/LechDutkiewicz/diabdis/pull/851) Merge grunt into master (@retlehs, @disusered, @kevva, @vdrnn, @ntwb, @singlow, @weslly)
+- [#850](https://github.com/LechDutkiewicz/diabdis/pull/850) Update grunt dependencies and node.js version (@weslly)
+- [#845](https://github.com/LechDutkiewicz/diabdis/pull/845) Sidebar support for args array (@Foxaii)
+- [#847](https://github.com/LechDutkiewicz/diabdis/pull/847) Update to Bootstrap 3.0.0 (@Foxaii)
+- [#844](https://github.com/LechDutkiewicz/diabdis/pull/844) hungarian lang update (@kukac7)
+- [#843](https://github.com/LechDutkiewicz/diabdis/pull/843) Update usage.md (@davoudrafati)
+- [#839](https://github.com/LechDutkiewicz/diabdis/pull/839) Updated pt_BR translation (@weslly)
+- [#838](https://github.com/LechDutkiewicz/diabdis/pull/838) Allow nav depth override (@Foxaii)
+- [#836](https://github.com/LechDutkiewicz/diabdis/pull/836) Closes #785 - Added grunt-imageoptim task (@coolalpaca)
+- [#827](https://github.com/LechDutkiewicz/diabdis/pull/827) reduce specificity in activation assets rewrites (@montchr)
+- [#837](https://github.com/LechDutkiewicz/diabdis/pull/837) persian language (@z-avanes)
+- [#824](https://github.com/LechDutkiewicz/diabdis/pull/824) Serbian Translation 1.1 (update) (@lautreamont3)
+- [#822](https://github.com/LechDutkiewicz/diabdis/pull/822) Search form support for WordPress 3.6+ (@Foxaii)
+- [#820](https://github.com/LechDutkiewicz/diabdis/pull/820) Update Gallery to BS3 (@Foxaii)
+- [#818](https://github.com/LechDutkiewicz/diabdis/pull/818) Bootstrap 3 RC1 (@retlehs, @Foxaii)
+- [#815](https://github.com/LechDutkiewicz/diabdis/pull/815) jquery-1.10.2 (@leoj3n)
+- [#811](https://github.com/LechDutkiewicz/diabdis/pull/811) update grunt-contrib-clean to 0.5.x (@singlow)
+- [#806](https://github.com/LechDutkiewicz/diabdis/pull/806) Update malay translation (@hariadi)
+- [#805](https://github.com/LechDutkiewicz/diabdis/pull/805) Fixed broken sidebar_path function (@remyvv)
+- [#801](https://github.com/LechDutkiewicz/diabdis/pull/801) Rework Roots_Wrapping class (@Foxaii)
+- [#804](https://github.com/LechDutkiewicz/diabdis/pull/804) fixes #799 (@leoj3n)
+- [#802](https://github.com/LechDutkiewicz/diabdis/pull/802) Update translation (@zensimilia)
+- [#800](https://github.com/LechDutkiewicz/diabdis/pull/800) Updated POT file (@zensimilia)
+- [#795](https://github.com/LechDutkiewicz/diabdis/pull/795) Update Russian translation (@zensimilia)
+- [#792](https://github.com/LechDutkiewicz/diabdis/pull/792) Corrected reference to 'utils.php', actual code is in 'wrapper.php', add... (@ssteinerx)
+- [#787](https://github.com/LechDutkiewicz/diabdis/pull/787) Gallery Shortcode Fix (@Foxaii)
+- [#780](https://github.com/LechDutkiewicz/diabdis/pull/780) Update to jQuery 1.10.1 (@Fouppy)
+- [#779](https://github.com/LechDutkiewicz/diabdis/pull/779) Show author display name in author archive (@Foxaii)
+- [#775](https://github.com/LechDutkiewicz/diabdis/pull/775) Serbian translation (@lautreamont3)
+- [#771](https://github.com/LechDutkiewicz/diabdis/pull/771) Add roots_display_sidebar filter (@gruvii)
+- [#763](https://github.com/LechDutkiewicz/diabdis/pull/763) Only display media if it is meaningful (@louisremi)
+- [#757](https://github.com/LechDutkiewicz/diabdis/pull/757) Wrapper Templates Filter (@Foxaii)
+- [#755](https://github.com/LechDutkiewicz/diabdis/pull/755) reorganize init defines (@leoj3n)
+- [#759](https://github.com/LechDutkiewicz/diabdis/pull/759) Update Malay language. (@hariadi)
+- [#754](https://github.com/LechDutkiewicz/diabdis/pull/754) Only make URLs relative if its not external (@swalkinshaw)
+- [#751](https://github.com/LechDutkiewicz/diabdis/pull/751) Assets redirection on multisite (@Fouppy)
 
-### 6.2.0: January 13th, 2013
-* Implement latest Nice Search
-* Update [gallery] shortcode
-* Add Simplified Chinese, Indonesian, Korean translations
-* Move template title to `lib/utils.php`
-* Update to Bootstrap 2.2.2
-* Update to jQuery 1.8.3
-* Use `entry-summary` class for excerpts per Readability's Article Publishing Guidelines
-* Cleanup/refactor `lib/activation.php`
-* Remove `lib/post-types.php` and `lib/metaboxes.php`
-* Make sure Primary Navigation menu always gets created and has the location set upon activation, update activation permalink method
-* Update to Bootstrap 2.2.1
-* Update conditional feed method
-* Update to Bootstrap 2.2.0
-* Return instead of echo class names in `roots_main_class` and `roots_sidebar_class`
-* Move nav customizations into `lib/nav.php`
+### 6.4.0 (2013/05/01 23:01 +00:00)
+- [#750](https://github.com/LechDutkiewicz/diabdis/pull/750) Fix activation page (@swalkinshaw)
+- [#745](https://github.com/LechDutkiewicz/diabdis/pull/745) Add uglify and version to watch (@patrickocoffeyo)
+- [#742](https://github.com/LechDutkiewicz/diabdis/pull/742) Re-Add Comment ID (@leoj3n)
+- [#740](https://github.com/LechDutkiewicz/diabdis/pull/740) Added Malay language translation (ms_MY) (@hariadi)
+- [#739](https://github.com/LechDutkiewicz/diabdis/pull/739) Update Dutch translation (@royduin)
+- [#727](https://github.com/LechDutkiewicz/diabdis/pull/727) is_dropdown can evaluate to true even if depth is not specified in wp_nav_menu() arguments (@amsross)
+- [#730](https://github.com/LechDutkiewicz/diabdis/pull/730) Added missing collapse class. (@Foxaii)
+- [#731](https://github.com/LechDutkiewicz/diabdis/pull/731) Don't warn about unwritable htaccess if that option is disabled (@tomdxw)
+- [#718](https://github.com/LechDutkiewicz/diabdis/pull/718) add comment template (@leoj3n)
+- [#714](https://github.com/LechDutkiewicz/diabdis/pull/714) Comment rendering fix (@sfradel)
+- [#717](https://github.com/LechDutkiewicz/diabdis/pull/717) Bump grunt branch versions to 6.3 (@ntwb)
+- [#707](https://github.com/LechDutkiewicz/diabdis/pull/707) Navbar items break if the menu depth is set to exclude children (@kara-todd)
+- [#709](https://github.com/LechDutkiewicz/diabdis/pull/709) Updated pt-br translation (@weslly)
+- [#706](https://github.com/LechDutkiewicz/diabdis/pull/706) Add instructions to Nginx rewrite config (@singlow)
+- [#704](https://github.com/LechDutkiewicz/diabdis/pull/704) Add jQuery CDN to theme features (@Foxaii)
+- [#696](https://github.com/LechDutkiewicz/diabdis/pull/696) Fix typo (@vdrnn)
+- [#695](https://github.com/LechDutkiewicz/diabdis/pull/695) Updated russian translation (@sumkincpp)
+- [#694](https://github.com/LechDutkiewicz/diabdis/pull/694) Update lib/h5bp-htaccess (@adam-lynch)
+- [#692](https://github.com/LechDutkiewicz/diabdis/pull/692) Add support for grunt 0.4.0 (@kevva)
+- [#691](https://github.com/LechDutkiewicz/diabdis/pull/691) Fix for admin bar (@polycode-0x90)
+- [#688](https://github.com/LechDutkiewicz/diabdis/pull/688) Relative URL fixes (@polycode-0x90)
+- [#687](https://github.com/LechDutkiewicz/diabdis/pull/687) Update doc/usage.md (@ShutterBrandon)
+- [#683](https://github.com/LechDutkiewicz/diabdis/pull/683) Use Bootstrap media object for listing comments (@retlehs)
+- [#681](https://github.com/LechDutkiewicz/diabdis/pull/681) Update Polish translation (@antennaio)
 
-### 6.1.0: October 2nd, 2012
-* Change roots_sidebar into a more explicit configuration array
-* Re-organize configuration/setup files
-* Update to jQuery 1.8.2
-* Refactor/simplify Roots vCard Widget
-* Move custom entry_meta code into template
-* Move Google Analytics code into footer template
-* Add CONTRIBUTING.md to assist with the new GitHub UI
-* Add nav walker support for CSS dividers and nav-header
+### 6.3.0 (2013/02/08 16:10 +00:00)
+- [#671](https://github.com/LechDutkiewicz/diabdis/pull/671) Organize grunt watch (@disusered)
+- [#672](https://github.com/LechDutkiewicz/diabdis/pull/672) Allow get_search_form() to be called more than once per request (@tomdxw)
+- [#668](https://github.com/LechDutkiewicz/diabdis/pull/668) Update Korean translation (@redfrost)
+- [#664](https://github.com/LechDutkiewicz/diabdis/pull/664) Update Bulgarian translation (@fingli)
+- [#666](https://github.com/LechDutkiewicz/diabdis/pull/666) Turkish translation updated (@karalamalar)
+- [#661](https://github.com/LechDutkiewicz/diabdis/pull/661) Updated French translation (@LeoColomb)
+- [#657](https://github.com/LechDutkiewicz/diabdis/pull/657) Add backslash to add_editor_style (@petermartin)
+- [#655](https://github.com/LechDutkiewicz/diabdis/pull/655) Update French translation (@LeoColomb)
+- [#650](https://github.com/LechDutkiewicz/diabdis/pull/650) Dynamic Sidebars (@swalkinshaw)
 
-### 6.0.0: September 16th, 2012
-* Simplify nav walker and support 3rd level dropdowns
-* Update to Bootstrap 2.1.1, jQuery 1.8.1, Modernizr 2.6.2
-* Add bundled docs
-* Update all templates to use [PHP Alternative Syntax](http://php.net/manual/en/control-structures.alternative-syntax.php)
-* Add MIT License
-* Implement scribu's [Theme Wrapper](http://scribu.net/wordpress/theme-wrappers.html) (see `base.php`)
-* Move `css/`, `img/`, and `js/` folders within a new `assets/` folder
-* Move templates, `comments.php`, and `searchform.php` to `templates/` folder
-* Rename `inc/` to `lib/`
-* Add placeholder `lib/post-types.php` and `lib/metaboxes.php` files
-* Rename `loop-` files to `content-`
-* Remove all hooks
-* Use `templates/page-header.php` for page titles
-* Use `head.php` for everything in `<head>`
+### 6.2.0 (2013/01/13 21:30 +00:00)
+- [#628](https://github.com/LechDutkiewicz/diabdis/pull/628) Add Korean Translation (@redfrost)
+- [#627](https://github.com/LechDutkiewicz/diabdis/pull/627) Add Indonesian Translation (@novrian)
+- [#619](https://github.com/LechDutkiewicz/diabdis/pull/619) move template title to function (@leoj3n)
+- [#622](https://github.com/LechDutkiewicz/diabdis/pull/622) Add Simplified Chinese (@yuanl)
+- [#593](https://github.com/LechDutkiewicz/diabdis/pull/593) Preserve the search query in the search input (@clarkbw)
+- [#604](https://github.com/LechDutkiewicz/diabdis/pull/604) Move Posts/Comments Pager to Unordered List (@Foxaii)
+- [#609](https://github.com/LechDutkiewicz/diabdis/pull/609) Add Traditional Chinese translations (@dlackty)
+- [#606](https://github.com/LechDutkiewicz/diabdis/pull/606) Merged changes in 'master' branch to 'grunt' branch (@retlehs, @swalkinshaw, @wilsonwc)
+- [#592](https://github.com/LechDutkiewicz/diabdis/pull/592) Activation cleanup (@swalkinshaw)
+- [#584](https://github.com/LechDutkiewicz/diabdis/pull/584) Update French translation (@LeoColomb)
+- [#587](https://github.com/LechDutkiewicz/diabdis/pull/587) Fix for compatibility with ubermenu (@wilsonwc)
+- [#577](https://github.com/LechDutkiewicz/diabdis/pull/577) Nav walker support for unset menu (@Foxaii)
+- [#576](https://github.com/LechDutkiewicz/diabdis/pull/576) Fix bug on roots_fix_duplicate_subfolder_urls (@jloosli)
 
-### 5.2.0: August 18th, 2012
-* Update to jQuery 1.8.0 and Modernizr 2.6.1
-* Fix duplicate active class in `wp_nav_menu` items
-* Merge `Roots_Navbar_Nav_Walker` into `Roots_Nav_Walker`
-* Add and update code documentation
-* Use `wp_get_theme()` to get the theme name on activation
-* Use `<figure>` & `<figcaption>` for captions
-* Wrap embedded media as suggested by Readability
-* Remove unnecessary `remove_action`'s on `wp_head` as of WordPress 3.2.1
-* Add updates from HTML5 Boilerplate
-* Remove well class from sidebar
-* Flush permalinks on activation to avoid 404s with clean URLs
-* Show proper classes on additional `wp_nav_menu()`'s
-* Clean up `inc/cleanup.php`
-* Remove old admin notice for tagline
-* Remove default tagline admin notice, hide from feed
-* Fix for duplicated classes in widget markup
-* Show title on custom post type archive template
-* Fix for theme preview in WordPress 3.3.2
-* Introduce `inc/config.php` with options for clean URLs, H5BP's `.htaccess`, root relative URLs, and Bootstrap features
-* Allow custom CSS classes in menus, walker cleanup
-* Remove WordPress version numbers from stylesheets
-* Don't include HTML5 Boilerplate's `style.css` by default
-* Allow `inc/htaccess.php` to work with Litespeed
-* Update to Bootstrap 2.0.4
-* Update Bulgarian translation
-* Don't use clean URLs with default permalink structure
-* Add translations for Catalan, Polish, Hungarian, Norwegian, Russian
+### 6.1.0 (2012/10/02 23:43 +00:00)
+- [#556](https://github.com/LechDutkiewicz/diabdis/pull/556) Sidebar config (@swalkinshaw)
+- [#558](https://github.com/LechDutkiewicz/diabdis/pull/558) Re-organize theme configuration and setup (@swalkinshaw)
+- [#557](https://github.com/LechDutkiewicz/diabdis/pull/557) Update to jQuery 1.8.2 (@swalkinshaw)
+- [#555](https://github.com/LechDutkiewicz/diabdis/pull/555) vCard refactor (@swalkinshaw)
+- [#554](https://github.com/LechDutkiewicz/diabdis/pull/554) Move HTML into templates (@swalkinshaw)
+- [#550](https://github.com/LechDutkiewicz/diabdis/pull/550) Add nav walker support for CSS dividers and nav-header (@Foxaii)
 
-### 5.1.0: April 14th, 2012
-* Various bugfixes for scripts, stylesheets, root relative URLs, clean URLs, and htaccess issues
-* Add a conditional feed link
-* Temporarily remove Gravity Forms customizations
-* Update to Bootstrap 2.0.2
-* Update `roots.pot` for translations
-* Add/update languages: Vietnamese, Swedish, Bulgarian, Turkish, Norwegian, Brazilian Portugese
-* Change widgets to use `<section>` instead of `<article>`
-* Add comment-reply.js
-* Remove optimized robots.txt
-* HTML5 Boilerplate, Modernizr, and jQuery updates
+### 6.0.0 (2012/09/16 15:20 +00:00)
+- [#539](https://github.com/LechDutkiewicz/diabdis/pull/539) Consistent use of PHP alternative syntax (@swalkinshaw)
+- [#535](https://github.com/LechDutkiewicz/diabdis/pull/535) Allow dropdowns to have a regular anchor (@limenet)
+- [#536](https://github.com/LechDutkiewicz/diabdis/pull/536) Re-generate roots.pot and update Brazilian Portuguese translation files (@weslly)
 
-### 5.0.0: February 5th, 2012
-* Remove all frameworks except Bootstrap
-* Update to Bootstrap 2.0
-* Remove `roots-options.php` and replaced with a more simple `roots-config.php`
-* Now using Bootstrap markup on forms, page titles, image galleries, alerts and errors, post and comment navigation
-* Remove Roots styles from `style.css` and introduced `app.css` for site-specific CSS
-* Remove almost all previous default Roots styling
-* Latest updates from HTML5 Boilerplate
+### 5.2.0 (2012/08/18 22:50 +00:00)
+- [#503](https://github.com/LechDutkiewicz/diabdis/pull/503) Menu args filter assumes items_wrap should be unordered list (@sanchothefat)
+- [#497](https://github.com/LechDutkiewicz/diabdis/pull/497) Russian translations (@sumkincpp)
+- [#494](https://github.com/LechDutkiewicz/diabdis/pull/494) Add Norwegian Bokmål translation (@haraldringvold)
+- [#489](https://github.com/LechDutkiewicz/diabdis/pull/489) Allow author to control archive penname from dashboard. (@Foxaii)
+- [#487](https://github.com/LechDutkiewicz/diabdis/pull/487) Fix lowercase reference to $WP_User->ID on roots_entry_meta() (@weslly)
+- [#484](https://github.com/LechDutkiewicz/diabdis/pull/484) Fix #479 - Use wp_get_theme() to get the theme name on activation (@weslly)
+- [#472](https://github.com/LechDutkiewicz/diabdis/pull/472) Corrected home URL for subdir installs (@jamescostian)
+- [#454](https://github.com/LechDutkiewicz/diabdis/pull/454) Fix empty foreach loop (@bgallagh3r)
+- [#447](https://github.com/LechDutkiewicz/diabdis/pull/447) Fix for theme preview (@AlexKovalevych)
+- [#448](https://github.com/LechDutkiewicz/diabdis/pull/448) Add Hungarian translation (@gabor-udvari)
+- [#442](https://github.com/LechDutkiewicz/diabdis/pull/442) Polish translation (@antennaio)
+- [#432](https://github.com/LechDutkiewicz/diabdis/pull/432) Add config option to toggle relative URL functionality (@elflo)
+- [#430](https://github.com/LechDutkiewicz/diabdis/pull/430) Remove stylesheet versioning for cache purposes (@wohlford)
+- [#429](https://github.com/LechDutkiewicz/diabdis/pull/429) Fix missing reference to main.js (@wohlford)
+- [#415](https://github.com/LechDutkiewicz/diabdis/pull/415) Update bootstrap to 2.0.3 (@tricil)
+- [#410](https://github.com/LechDutkiewicz/diabdis/pull/410) Update Bulgarian translation (@fingli)
+- [#408](https://github.com/LechDutkiewicz/diabdis/pull/408) Add Catalan language files (@lluisgerard)
 
-### 4.1.0: February 1st, 2012
-* Update translations
-* HTML5 Boilerplate updates
-* Fix for Server 500 errors
-* Add `roots-scripts.php`, now using `wp_enqueue_script`
-* Re-organize `roots-actions.php`
-* Allow `<script>` tags in TinyMCE
-* Add full width class and search form to 404 template
-* Remove Blueprint CSS specific markup
-* Use Roots Nav Walker as default
-* Add author name and taxonomy name to archive template title
-* Add Full Width CSS class options
+### 5.1.0 (2012/04/15 01:19 +00:00)
+- [#400](https://github.com/LechDutkiewicz/diabdis/pull/400) Correct viewport, add responsive images fix (@tricil)
+- [#397](https://github.com/LechDutkiewicz/diabdis/pull/397) Re-generate roots.pot file and update Brazilian Portuguese language files (@weslly)
+- [#393](https://github.com/LechDutkiewicz/diabdis/pull/393) Update Brazilian Portuguese language files from new .pot file (@weslly)
+- [#340](https://github.com/LechDutkiewicz/diabdis/pull/340) Fix compatiblity issues with other plugins which add rewrite rules (@maff)
+- [#380](https://github.com/LechDutkiewicz/diabdis/pull/380) Change widgets to use <section> instead of <article> (@ChrisClayton)
+- [#391](https://github.com/LechDutkiewicz/diabdis/pull/391) Fix vCard widget for international support (@ntwb)
+- [#386](https://github.com/LechDutkiewicz/diabdis/pull/386) Update lang/tr_TR.po (@ObsessiO)
+- [#387](https://github.com/LechDutkiewicz/diabdis/pull/387) Correcting line numbers. (@ObsessiO)
+- [#378](https://github.com/LechDutkiewicz/diabdis/pull/378) Updated Swedish language files from new .pot file (@hannesjohansson)
+- [#389](https://github.com/LechDutkiewicz/diabdis/pull/389) Norwegian (nynorsk) language files (@utenH)
+- [#383](https://github.com/LechDutkiewicz/diabdis/pull/383) Update to jQuery 1.7.2 (@zslabs)
+- [#369](https://github.com/LechDutkiewicz/diabdis/pull/369) Add Bulgarian translation (@fingli)
+- [#364](https://github.com/LechDutkiewicz/diabdis/pull/364) Add Swedish language files (@hannesjohansson)
+- [#328](https://github.com/LechDutkiewicz/diabdis/pull/328) add support for custom menu classes (@waitxd)
+- [#322](https://github.com/LechDutkiewicz/diabdis/pull/322) Use &times; for alert in loop.php (@ChrisClayton)
+- [#320](https://github.com/LechDutkiewicz/diabdis/pull/320) Add Vietnamese language files (@doobbe)
+- [#287](https://github.com/LechDutkiewicz/diabdis/pull/287) Ending #wrap div earlier (before <footer>) in footer.php (@leoj3n)
+- [#294](https://github.com/LechDutkiewicz/diabdis/pull/294) Update to Bootstrap v2.0.1 (@coreywagehoft)
+- [#284](https://github.com/LechDutkiewicz/diabdis/pull/284) Add a space before data-dropdown on menus (@LimeBlast)
 
-### 4.0.0: January 4th, 2012
-* Add theme activation options
-* HTML5 Boilerplate updates
-* Add CSS frameworks: Bootstrap, Foundation
-* Add translations: Dutch, Italian, Macedonian, German, Finnish, Danish, Spanish, and Turkish
-* Update jQuery
-* Remove included jQuery plugins
-* Clean up whitespace, switched to two spaces for tabs
-* Clean up `body_class()` some more with `roots_body_class()`
-* Post meta information is now displayed using a function (similar to Twenty Eleven)
-* Bugfixes for 1140 options
-* Add first and last classes to widgets
-* Fix bug with initial options save
-* Remove sitemap and listing subpages templates
-* Child themes can now unregister sidebars
-* Add fix for empty search query
-* Update README
-* Blocking access to readme.html and license.txt to hide WordPress version information
+### 4.1.0 (2012/02/01 16:36 +00:00)
+- [#261](https://github.com/LechDutkiewicz/diabdis/pull/261) Upgrading Twitter Bootstrap to v.2.0.0 (@coreywagehoft)
+- [#249](https://github.com/LechDutkiewicz/diabdis/pull/249) Add updated danish translations re: issue #245 (@cabgfx)
+- [#248](https://github.com/LechDutkiewicz/diabdis/pull/248) updated french translation (@johnraz)
+- [#247](https://github.com/LechDutkiewicz/diabdis/pull/247) Updated German translations (@Okeanos)
+- [#246](https://github.com/LechDutkiewicz/diabdis/pull/246) Updated Turkish translation (@karalamalar)
+- [#244](https://github.com/LechDutkiewicz/diabdis/pull/244) German translation update (@Okeanos)
+- [#229](https://github.com/LechDutkiewicz/diabdis/pull/229) Update roots_nav_walker and CSS to work with current-page-*. (@benklocek)
+- [#227](https://github.com/LechDutkiewicz/diabdis/pull/227) possible fix for 500 server error (@alkymst)
+- [#216](https://github.com/LechDutkiewicz/diabdis/pull/216) Updated foundation's app.js file to the latest version (@msurguy)
 
-### 3.6.0: August 12th, 2011
-* HTML5 Boilerplate 2.0 updates
-* Cleaner output of enqueued styles and scripts
-* Adde option for root relative URLs
-* Small fixes to root relative URLs and clean assets
-* Update included jQuery plugins
-* Add French translation (thanks @johnraz)
-* Add Brazilian Portuguese translation (thanks @weslly)
-* Switch the logo to use `add_custom_image_header`
-* Add a function that strips unnecessary self-closing tags
-* Code cleanup and re-organization
+### 4.0.0 (2012/01/04 19:35 +00:00)
+- [#205](https://github.com/LechDutkiewicz/diabdis/pull/205) Turkish Translation added (@karalamalar)
+- [#200](https://github.com/LechDutkiewicz/diabdis/pull/200) make roots_register_sidebars() less redundant (@moimikey)
+- [#192](https://github.com/LechDutkiewicz/diabdis/pull/192) fixed issue in which .htaccess filtered more rules than it should (@kikito)
+- [#179](https://github.com/LechDutkiewicz/diabdis/pull/179) Get the best of both worlds: require_once and locate_template (@mwrather)
+- [#169](https://github.com/LechDutkiewicz/diabdis/pull/169) Adding Twitter Bootstrap CSS Framework, thx @coreywagehoft (@coreywagehoft)
+- [#181](https://github.com/LechDutkiewicz/diabdis/pull/181) Add a missing danish translation (@cabgfx)
+- [#178](https://github.com/LechDutkiewicz/diabdis/pull/178) Add danish language files (@cabgfx)
+- [#172](https://github.com/LechDutkiewicz/diabdis/pull/172) Initial Finnish Translation (@ivuorinen)
+- [#165](https://github.com/LechDutkiewicz/diabdis/pull/165) Fix register sidebars so child themes can unregister them, thx @johnnypeck (@johnnypeck)
+- [#164](https://github.com/LechDutkiewicz/diabdis/pull/164) adding Foundation CSS Framework, thx @coreywagehoft (@coreywagehoft)
+- [#154](https://github.com/LechDutkiewicz/diabdis/pull/154) Updated translations based on feedback, fixed typo. (@Okeanos)
+- [#153](https://github.com/LechDutkiewicz/diabdis/pull/153) Added German translation files. (@Okeanos)
+- [#135](https://github.com/LechDutkiewicz/diabdis/pull/135) Fixes "Trying to get property of non-object" error on 404 pages (@adamnbowen)
 
-### 3.5.0: July 30th, 2011
-* Complete rewrite of theme options based on Twenty Eleven
-* CSS frameworks: refactor code and add default classes for each framework
-* CSS frameworks: add support for Adapt.js and LESS
-* CSS frameworks: add option for None
-* Add support for WPML and theme translation
-* Add option for cleaner nav menu output
-* Add option for FOUT-B-Gone
-* Add authorship rel attribute to post author link
-* Activation bugfix for pages being added multiple times
-* Bugfixes to the root relative URL function
-* Child themes will now load their CSS automatically and properly
-* HTML5 Boilerplate updates (including Normalize.css, Modernizr 2.0, and Respond.js)
-* Introduce cleaner way of including HTML5 Boilerplate's `.htaccess`
-* Add hooks &amp; actions
-* Rename `includes/` directory to `inc/`
-* Add a blank `inc/roots-custom.php` file
+### 3.6.0 (2011/08/12 17:14 +00:00)
+- [#111](https://github.com/LechDutkiewicz/diabdis/pull/111) Brazilian Portuguese translation (@weslly)
+- [#110](https://github.com/LechDutkiewicz/diabdis/pull/110) Adding Roots Theme Options to the frontend Admin Bar (@mwrather)
 
-### 3.2.4: May 19th, 2011
-* Bugfixes
-* Match latest changes to HTML5 Boilerplate and Blueprint CSS
-* Update jQuery to 1.6.1
+### 3.5.0 (2011/07/30 19:41 +00:00)
+- [#92](https://github.com/LechDutkiewicz/diabdis/pull/92) Escape slashes in roots_gallery_style (@mwrather)
+- [#86](https://github.com/LechDutkiewicz/diabdis/pull/86) Optimized stylesheet_link_tag (@sjothen)
+- [#75](https://github.com/LechDutkiewicz/diabdis/pull/75) Invisible character between two '>' on line 3 doesn't allow validation (@limitlis)
+- [#69](https://github.com/LechDutkiewicz/diabdis/pull/69) Avoid re-adding page to the main nav each time roots is activated (@johnraz)
 
-### 3.2.3: May 10th, 2011
-* Bugfixes
-* Add `language_attributes()` to `<html>`
-* Match latest changes to HTML5 Boilerplate and Blueprint CSS
-* Update jQuery to 1.6
-
-### 3.2.2: April 24th, 2011
-* Bugfixes
-
-### 3.2.1: April 20th, 2011
-* Add support for child themes
-
-### 3.2.0: April 15th, 2011
-* Add support for the 1140px Grid
-* Update the conditional comment code to match latest changes to HTML5 Boilerplate
-
-### 3.1.1: April 7th, 2011
-* Fix relative path function to work correctly when WordPress is installed in a subdirectory
-* Update jQuery to 1.5.2
-* Fix comments to show avatars correctly
-
-### 3.1.0: April 1st, 2011
-* Add support for 960.gs thanks to John Liuti
-* Add more onto the `.htaccess` from HTML5 Boilerplate
-* Allow the theme directory and name to be renamable
-
-### 3.0.0: March 28th, 2011
-* Change name from BB to Roots and release to the public
-* Update various areas to match the latest changes to HTML5 Boilerplate
-* Change the theme markup based on hCard/Readability Guidelines and work by Jonathan Neal
-* Create the navigation menus and automatically set their locations during theme activation
-* Set permalink structure to `/%year%/%postname%/`
-* Set uploads folder to `/assets/`
-* Rewrite static folders in `/wp-content/themes/roots/` (`css/`, `js/`, `img/`) to the root (`/css/`, `/js/`, `/img/`)
-* Rewrite `/wp-content/plugins/` to `/plugins/`
-* Add more root relative URLs on WordPress functions
-* Search results (`/?s=query`) rewrite to `/search/query/`
-* `l10n.js` is deregistered
-* Change [gallery] to output `<figure>` and `<figcaption>` and link to file by default
-* Add more `loop.php` templates
-* Made the HTML editor have a monospaced font
-* Add `front-page.php`
-* Update CSS for Gravity Forms 1.5
-* Add `searchform.php template`
-
-### 2.4.0: January 25th, 2011
-* Add a notification when saving the theme settings
-* Add support for navigation menus
-* Create function that makes sure there is a Home page on theme activation
-* Update various areas to match the latest changes to HTML5 Boilerplate
-
-### 2.3.0: December 8th, 2010
-* Logo is no longer an `<h1>`
-* Add ARIA roles again
-* Change `ul#nav` to `nav#nav-main`
-* Add vCard to footer
-* Made all URL's root relative
-* Add Twitter and Facebook widgets to footer
-* Add SEO optimized `robots.txt` from WordPress codex
-
-### 2.2.0: September 20th, 2010
-* Add asynchronous Google Analytics
-* Update `.htaccess` with latest changes from HTML5 Boilerplate
-
-### 2.1.0: August 19th, 2010
-* Remove optimizeLegibility from headings
-* Update jQuery to latest version
-* Implement HTML5 Boilerplate `.htaccess`
-
-### 2.0.1: August 2nd, 2010
-* Add some presentational CSS classes
-* Add footer widget
-* Add more Gravity Forms default styling
-
-### 2.0.0: July 19th, 2010
-* Add HTML5 Boilerplate changes
-* Implement `loop.php`
-* wp_head cleanup
-* Add `page-subpages.php` template
-
-### 1.5.0: April 15th, 2010
-* Integrate Paul Irish's frontend-pro-template (the original HTML5 Boilerplate)
-
-### 1.0.0: December 18th, 2009
-* Add Blueprint CSS to Starkers
+### 3.2.4 (2011/05/20 01:13 +00:00)
+- [#63](https://github.com/LechDutkiewicz/diabdis/pull/63) Removed unnecessary class on #nav-main (@masondesu)
+- [#55](https://github.com/LechDutkiewicz/diabdis/pull/55) Get wordpress 'home' dir. Correct fix. (@johnraz)
