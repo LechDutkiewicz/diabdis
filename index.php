@@ -1,4 +1,9 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php
+
+if ( !defined( 'ABSPATH' ) )
+  exit( 'No direct script access allowed' ); // Exit if accessed directly
+
+get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -7,6 +12,11 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<?php
+if(is_category())
+  get_template_part('templates/blog', 'cat-top-img');
+?>
+
 <div id="content">
 
 <?php while (have_posts()) : the_post(); ?>
@@ -14,7 +24,7 @@
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
+  <nav id="pagination" class="post-nav">
     <ul class="pager">
       <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
       <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
@@ -23,3 +33,4 @@
 <?php endif; ?>
 
 </div>
+<div id='more' class='btn btn-default btn-large'>Load More</div>

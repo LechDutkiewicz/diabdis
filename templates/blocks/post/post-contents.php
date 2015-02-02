@@ -24,3 +24,5 @@ $layout = get_field('post_switch_type');
 		else :
 			the_field('post_contents');
 			endif;
+
+			//the_content();

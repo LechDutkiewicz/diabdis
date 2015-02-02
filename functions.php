@@ -10,6 +10,7 @@
  * @link https://github.com/roots/roots/pull/1042
  */
 $roots_includes = array(
+  'lib/classSocialCounter.php',
   'lib/utils.php',           // Utility functions
   'lib/init.php',            // Initial theme setup and constants
   'lib/wrapper.php',         // Theme wrapper class

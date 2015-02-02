@@ -26,7 +26,7 @@ function roots_scripts() {
       'custom'    => '/assets/js/custom.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
-      'infiScr'   => '/assets/vendor/infinite-scroll/jquery.infinitescroll.min.js'
+      'infiScr'   => '/assets/vendor/infinite-scroll/jquery.infinitescroll.js'
     );
   } else {
     $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
@@ -36,7 +36,7 @@ function roots_scripts() {
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
       'modernizr' => '/assets/js/vendor/modernizr.min.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-      'infiScr'   => '/assets/js/vendor/jquery.infinitescroll.min.js'
+      'infiScr'   => '/assets/js/vendor/jquery.infinitescroll.js'
     );
   }
 

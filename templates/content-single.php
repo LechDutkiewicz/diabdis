@@ -17,6 +17,18 @@ if ( !defined( 'ABSPATH' ) )
     <div class="entry-content">
       <?php get_template_part('templates/blocks/post/post', 'contents'); ?>
     </div>
+    <div class="entry-tags">
+      <?php get_template_part('templates/blocks/post/post', 'tags'); ?>
+    </div>
+    <div class="sm-share">
+      <?php get_template_part('templates/blocks/sm', 'share'); ?>
+    </div>
+    <div class="comments">
+      <?php get_template_part('templates/blocks/comments', 'disqus'); ?>
+    </div>
+    <aside class="related-posts">
+      <?php get_template_part('templates/blocks/post/post', 'related'); ?>
+    </aside>
     <footer>
     </footer>
   </article>

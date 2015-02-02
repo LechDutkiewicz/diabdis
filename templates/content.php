@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) )
 		<?php render_category_link(); ?>
 	</header>
 	<div class="feat-img col-md-3">
-		<?php get_template_part('templates/blocks/post/post', 'feat-img'); ?>
+		<?php get_template_part('templates/blocks/post/post', 'feat-thumb'); ?>
 	</div>
 	<div class="post-excerpt col-md-9">
 		<?php get_template_part('templates/blocks/post/post', 'excerpt'); ?>
