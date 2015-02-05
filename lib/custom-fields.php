@@ -30,9 +30,7 @@ add_filter( 'acf/options_page/settings', 'mthemes_acf_settings' );
 
 if ( function_exists( "register_field_group" ) ) {
 
-	/*
-	 * Blog category parameters setup - add color and icon
-	 */
+// Blog category parameters setup - add color and icon
 
 	register_field_group( array(
 		'id' => 'acf_category_parameters',
@@ -56,6 +54,12 @@ if ( function_exists( "register_field_group" ) ) {
 				'name' => 'cat_img',
 				'type' => 'image',
 			),
+			array(
+				'key' => 'field_5256bd0fc2356234592',
+				'label' => __( 'Category claim', 'roots' ),
+				'name' => 'cat_claim',
+				'type' => 'text',
+				),
 		),
 		'location' => array(
 			array(
@@ -77,9 +81,7 @@ if ( function_exists( "register_field_group" ) ) {
 		'menu_order' => 0,
 	) );
 
-	/*
-	 * Blog post parameters setup - add table of contents option
-	 */
+// Blog post parameters setup - add table of contents option
 
 	register_field_group( array(
 		'id' => 'acf_post_parameters',
@@ -210,9 +212,7 @@ if ( function_exists( "register_field_group" ) ) {
 		'menu_order' => 1,
 		) );
 
-	/*
-	 * Theme options page setup
-	 */
+// Theme options page setup
 
 	register_field_group( array(
 		'id' => 'theme_options',
@@ -243,6 +243,51 @@ if ( function_exists( "register_field_group" ) ) {
 		'menu_order' => 1,
 		) );
 
+// featured posts for home page
+
+	register_field_group( array(
+		'id' => 'theme_blog_options',
+		'title' => __( 'Featured posts on home page', 'roots' ),
+		'fields' => array(
+			array(
+				'key' => 'field_1532512',
+				'name' => 'featured_posts',
+				'type' => 'repeater',
+				'sub_fields' => array(
+					array(						
+						'key' => 'field_2323424tr547',
+						'label' => __( 'Featured post', 'roots' ),
+						'name' => 'featured_post',
+						'type' => 'post_object',
+						'post_type' => array(
+							0 => 'post',
+							),
+						),
+					),
+				),
+			),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options-featured-posts',
+					'order_no' => 1,
+					'group_no' => 1,
+					),
+				),
+			),
+		'options' => array(
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array(
+				),
+			),
+		'menu_order' => 1,
+		));
+
+// featured posts for category pages
+
 	foreach ($categories as $category) {
 		register_field_group( array(
 			'id' => 'theme_category_' . $category->term_id . '_options',
@@ -256,7 +301,7 @@ if ( function_exists( "register_field_group" ) ) {
 						array(
 							'key' => 'field_2323424ty4cat',
 							'label' => __( 'Featured post', 'roots' ),
-							'name' => 'featured_post_cat_',
+							'name' => 'featured_post',
 							'type' => 'post_object',
 							'post_type' => array(
 								0 => 'post',

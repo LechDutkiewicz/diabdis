@@ -13,7 +13,7 @@ $author = get_field('post_thumb_author');
 		'link_to_post' => true,
 		'image_class' => array('img-responsive', 'img-rounded', 'img-full'),
 		'meta_key' => false,
-		'size' => 'full'
+		'size' => 'thumbnail'
 		)
 	);
 	?>

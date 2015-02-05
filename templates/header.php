@@ -1,3 +1,9 @@
+<?php
+
+if ( !defined( 'ABSPATH' ) )
+  exit( 'No direct script access allowed' ); // Exit if accessed directly
+?>
+
 <header class="banner navbar navbar-default navbar-static-top" role="banner">
   <div class="container">
     <div class="navbar-header">
@@ -17,6 +23,10 @@
       <?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
       endif;
       ?>
+
+      <a data-template="typeform" role="button" data-target="#modal" data-toggle="modal" data-title="<?php _e( 'Sign up to Diabdis', 'roots' ); ?>" class="btn btn-default btn-large"><?php _e( 'Sign up to Diabdis', 'roots' ); ?></a>
+      <a data-template="mailchimp" role="button" data-target="#modal" data-toggle="modal" data-title="<?php _e( 'Subscribe', 'roots' ); ?>" class="btn btn-default btn-large"><?php _e( 'Subscribe', 'roots' ); ?></a>
+
     </nav>
     <nav class="" role="navigation" aria-labelledby="categoryLabel">
       <?php 

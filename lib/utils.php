@@ -1,4 +1,8 @@
 <?php
+
+if ( !defined( 'ABSPATH' ) )
+  exit( 'No direct script access allowed' ); // Exit if accessed directly
+
 /**
  * Utility functions
  */
@@ -104,17 +108,21 @@ function render_social_counter($output) {
 
 add_action('init', 'render_social_counter', 100);
 
-function the_category_image() {
+function get_current_category() {
+  return get_category(get_query_var('cat'), false);
+}
+
+function get_category_image() {
 
 // setup vars
-  $currentCat = get_category(get_query_var('cat'), false);
+  $currentCat = get_current_category();
   $img = get_field('cat_img', "{$currentCat->taxonomy}_{$currentCat->term_id}");
 
-  $size='medium';
+  $size='full';
 
   $thumb = wp_get_attachment_image_src( $img['id'], $size );
   $url = $thumb['0'];
-  return($url);
+  return $url;
 
   /*get_the_image(array(
     'post_id' => $img['id'],
@@ -124,4 +132,33 @@ function the_category_image() {
     'size' => 'full'
     ));*/
 
+}
+
+function the_category_image() {
+
+  echo get_category_image();
+
+}
+
+function get_category_claim() {
+
+// setup vars
+  $currentCat = get_current_category();
+  $claim = get_field('cat_claim', "{$currentCat->taxonomy}_{$currentCat->term_id}");
+
+  return $claim;
+
+}
+
+function the_category_claim() {
+
+  echo get_category_claim();
+
+}
+
+add_action( 'wp_ajax_nopriv_modal_load', 'ajax_modal_load');
+
+function ajax_modal_load() {
+  $output = get_template_part('/templates/blocks/modals/modal', $_POST['template']);
+  die($output);
 }

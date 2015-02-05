@@ -14,13 +14,14 @@ $author = get_field('post_thumb_author');
 		'image_class' => array('img-responsive', 'img-rounded', 'img-full'),
 		'meta_key' => false,
 		'size' => 'full'
-		));
+		)
+	);
+	?>
+	<div class="image-author">
+		<?php
+		if ($author) 
+			echo $author;
 		?>
-		<div class="image-author">
-			<?php
-			if ($author) 
-				echo $author;
-			?>
-		</div>
 	</div>
+</div>
 

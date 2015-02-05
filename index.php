@@ -3,7 +3,7 @@
 if ( !defined( 'ABSPATH' ) )
   exit( 'No direct script access allowed' ); // Exit if accessed directly
 
-get_template_part('templates/page', 'header'); ?>
+//get_template_part('templates/page', 'header'); ?>
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -11,11 +11,6 @@ get_template_part('templates/page', 'header'); ?>
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
-
-<?php
-if(is_category())
-  get_template_part('templates/blog', 'cat-top-img');
-?>
 
 <div id="content">
 

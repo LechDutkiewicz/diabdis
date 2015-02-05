@@ -23,6 +23,9 @@ if ( !defined( 'ABSPATH' ) )
     <div class="sm-share">
       <?php get_template_part('templates/blocks/sm', 'share'); ?>
     </div>
+    <div class="subscribe">
+      <?php get_template_part('templates/blocks/subscribe'); ?>
+    </div>
     <div class="comments">
       <?php get_template_part('templates/blocks/comments', 'disqus'); ?>
     </div>
