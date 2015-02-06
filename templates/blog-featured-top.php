@@ -5,6 +5,8 @@ if ( !defined( "ABSPATH" ) )
 
 ?>
 
+<div class="row">
+
 <?php
 
 if (is_category()) {
@@ -73,4 +75,6 @@ if (is_category()) {
 		wp_reset_postdata();
 
 	}
-}
+} ?>
+
+</div>

@@ -75,21 +75,75 @@
 
 });
 
-$('#modal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget),
-  recipient = button.data('title'),
-  modal = $(this);
+  $('#modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget),
+    recipient = button.data('title'),
+    modal = $(this);
 
-  modal.find('.modal-title').text(recipient);
+    modal.find('.modal-title').text(recipient);
 
-});
+  });
 
 
-$(document).ready(function(){
+  $(document).ready(function(){
 
-  $('#pagination').hide();
+    $('#pagination').hide();
 
-});
+    catNavi = {
+      args: {
+        navi: $('.cat-navi'),
+        items: $('.cat-navi > li:not(.active)'),
+        //activeItems: $('.cat-navi > li.active')
+      },
+      init: function() {
+        catNavi.setup();
+      },
+      setup: function() {
+        /*catNavi.args.items.each(function() {
+          catNavi.actions.makeUnactive($(this));
+        });
+        catNavi.args.activeItems.each(function() {
+          catNavi.actions.makeActive($(this));
+        });*/
+        catNavi.events();
+      },
+      actions: {
+        /*makeActive : function(el) {
+          color = el.attr('data-background-color');
+          el.css({
+            'background-color': color
+          }).find('a').css({
+            'color': '#FFFFFF'
+          });
+        },
+        makeUnactive : function(el) {
+          if (!el.hasClass('active')) {
+            color = el.attr('data-background-color');
+            el.css({
+              'background-color': '#FFFFFF'
+            }).find('a').css({
+              'color': color
+            });
+          }
+        }*/
+      },
+      events: function() {
+        /*catNavi.args.items.bind('mouseenter', function() {
+          catNavi.actions.makeActive($(this));
+        });
+        catNavi.args.items.bind('mouseleave', function() {
+          catNavi.actions.makeUnactive($(this));
+        });*/
+        catNavi.args.items.bind('mouseenter mouseleave', function(){
+          //if (!$(this).hasClass('active')) {
+            $(this).toggleClass('active');
+          //}
+        });
+      },
+    };
+    catNavi.init();
+
+  });
 /*$('#more').click(function(){
   alert('start');
   $(document).load('/page/2/ #content article', function(){

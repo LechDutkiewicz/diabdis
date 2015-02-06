@@ -135,3 +135,31 @@ ga('create','<?php echo GOOGLE_ANALYTICS_ID; ?>','auto');ga('send','pageview');
 if (GOOGLE_ANALYTICS_ID && (WP_ENV !== 'production' || !current_user_can('manage_options'))) {
   add_action('wp_footer', 'roots_google_analytics', 20);
 }
+
+function my_styles_method() {
+  wp_enqueue_style(
+    'custom-style',
+    get_template_directory_uri() . '/assets/css/main.css'
+  );
+        $custom_css = category_navi_styles();
+        wp_add_inline_style( 'custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+
+function category_navi_styles() {
+
+  $categories = get_categories();
+
+  $output = '';
+
+  foreach ($categories as $category) {
+
+    $slug = $category->slug;
+    $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
+    $output .= ".cat-navi > li.$slug.active{background-color: {$color};}.cat-navi > li.$slug a{color: {$color};}.category-$slug .bg-top .overlay{background-color: {$color};}";
+
+  }
+
+  return $output;
+
+}

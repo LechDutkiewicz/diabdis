@@ -9,6 +9,6 @@ $categories = get_categories();
 
 ?>
 
-<ul>
+<ul class="cat-navi clearfix">
 	<?php render_category_link($categories, true); ?>
 </ul>

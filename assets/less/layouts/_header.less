@@ -1,1 +1,35 @@
 .banner { }
+.navbar {
+	margin: 0;
+	border: 0;
+}
+.cat-navi {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	> li {
+		float: left;
+		width: 20%;
+		cursor: pointer;
+		a {
+			display: block;
+			line-height: 50px;
+			font-size: 1.0625em;
+		}
+		i {
+			margin-right: @padding-base-vertical;
+		}
+		&.active {
+			a {
+				color: @white;
+			}
+		}
+	}
+}
+.bg-cat-top {
+	height: 200px;
+	color: @white;
+	.title {
+		font-size: 2.3529411764705882352941176470588em;
+	}
+}

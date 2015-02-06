@@ -65,18 +65,22 @@ function render_category_link($categories = null, $menuLayout = null) {
 
   foreach ($categories as $category) :
 
-    $link = get_category_link($category->term_id);
+  $link = get_category_link($category->term_id);
   $title = $category->name;
+  $slug = $category->slug;
   $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
   $icon = get_field('cat_icon', "{$category->taxonomy}_{$category->term_id}");
 
   $output = '';
 
-  if($menuLayout)
-    $output .= "<li class='cat-menu-item'>";
+  if($menuLayout) {
+    $currentCat = get_current_category();
+    $active = ($currentCat->name == $category->name) ? ' active' : '';
+    $output .= "<li class='text-center" . $active ." " . $slug . "'>";
+  }
 
-  $output .= "<a class='category-link' href='" . $link . "' title='" . $title . "' style='color:" . $color . "'>";
-  $output .= $icon . "<span>" . $title . "</span>";
+  $output .= "<a class='" . $slug . "' href='" . $link . "' title='" . $title . "'>";
+  $output .= $icon . "<span class='cap'>" . $title . "</span>";
   $output .= "</a>";
 
   if($menuLayout)
@@ -161,4 +165,25 @@ add_action( 'wp_ajax_nopriv_modal_load', 'ajax_modal_load');
 function ajax_modal_load() {
   $output = get_template_part('/templates/blocks/modals/modal', $_POST['template']);
   die($output);
+}
+
+/*
+ * Setup data for dynamic footer
+ */
+
+if ( !function_exists( 'dynamic_year' ) ) {
+
+  function dynamic_year() {
+
+    $startYear = 2014;
+    $currYear = date( 'Y' );
+    if ( $currYear > $startYear ) {
+      $yearCopy = "$startYear - $currYear";
+    } else {
+      $yearCopy = $startYear;
+    }
+    
+    return $yearCopy;
+  }
+
 }
