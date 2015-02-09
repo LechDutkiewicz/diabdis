@@ -156,7 +156,7 @@ function category_navi_styles() {
 
     $slug = $category->slug;
     $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
-    $output .= ".cat-navi > li.$slug.active{background-color: {$color};}.cat-navi > li.$slug a{color: {$color};}.category-$slug .bg-top .overlay{background-color: {$color};}";
+    $output .= ".cat-navi > li.$slug.active{background-color: {$color};}.cat-navi > li.$slug a{color: {$color};}.category-$slug .bg-top .overlay{background-color: {$color};}.cat-link.$slug{color: {$color};}.featured-article.category-$slug .featured-image{border-bottom-color: {$color};}.featured-article .featured-image .cat-link.$slug{background-color: {$color};}.featured-article .featured-image .cat-link.$slug:after{border-bottom-color: {$color}; border-left-color: {$color};}";
 
   }
 

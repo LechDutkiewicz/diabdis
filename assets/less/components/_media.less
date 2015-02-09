@@ -19,3 +19,26 @@
 .bg-cover {
 	background-size: cover;
 }
+
+.featured-image {
+	position: relative;
+	.image-author {
+		position: absolute;
+		background-color: @white;
+		bottom: 20px;
+		right: 0;
+		padding: @thumbnail-caption-padding;
+		p {
+			margin: 0;
+			font-size: @font-size-small;
+		}
+	}
+}
+
+.thumbnail {
+	padding: 0;
+	margin-bottom: 0;
+	background: none;
+	border: none;
+	.border-radius(0px);
+}

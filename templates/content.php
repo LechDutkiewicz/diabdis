@@ -4,10 +4,10 @@ if ( !defined( 'ABSPATH' ) )
   exit( 'No direct script access allowed' ); // Exit if accessed directly
 ?>
 
-<article <?php post_class('row'); ?>>
+<article <?php post_class('row feed-article'); ?>>
 	<header class="col-md-12">
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h3 class="entry-title"><?php the_title(); ?></h3>
 		</a>
 		<?php render_category_link(); ?>
 	</header>

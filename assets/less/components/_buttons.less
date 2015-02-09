@@ -1,0 +1,41 @@
+.btn-cta {
+	padding: 0 26px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 1.0625em;
+	text-decoration: none;
+	border: 0;
+	.border-radius(22px);
+	color: @white;
+	.transition(background-color 0.25s linear);
+	&.no-bg {
+		background-color: rgba(0,0,0,0);
+		border: 1px solid;
+		&:hover, &:focus {
+			background-color: rgba(255,255,255,.3);
+			color: @white;
+		}
+		&.btn-dark {
+			color: @gray-darker;
+			&:hover, &:focus {
+				background-color: rgba(0,0,0,.3);
+			}
+		}
+	}
+	&.btn-blue {
+		background-color: @brand-primary;
+		box-shadow: 0px 2px 0px @blue-dark;
+		&:hover, &:focus {
+			background-color: @blue-dark;
+			color: @white;
+		}
+	}
+	&.btn-yellow {
+		background-color: @yellow;
+		box-shadow: 0px 2px 0px @yellow-dark;
+		&:hover, &:focus {
+			background-color: @yellow-dark;
+			color: @white;
+		}
+	}
+}

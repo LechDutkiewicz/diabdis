@@ -17,7 +17,15 @@
 			<p>© <?php echo dynamic_year(); ?> Diabdis. Wszelkie prawa zastrzeżone.</p>
 		</div>
 	</div>
+	
 	<script type="text/javascript">
 	var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 	</script>
+
+  <script type="text/javascript">
+  var img= "<?php echo get_template_directory_uri() . '/assets/img/ajax-loader.gif'; ?>",
+  msgText= "<?php _e( 'Loading next posts', 'roots'); ?>",
+  finishedMsg= "<?php _e( 'There is no more posts to load', 'roots'); ?>";
+  </script>
+
 </footer>

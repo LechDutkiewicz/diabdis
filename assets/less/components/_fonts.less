@@ -32,3 +32,21 @@ body {
     text-transform: uppercase;
   }
 }
+h2.entry-title {
+  font-size: 2em;
+}
+h3.entry-title {
+  font-size: 1.4117647058823529411764705882353em;
+}
+.read-more {
+  &:hover, &:focus {
+    text-decoration: none;
+    i {
+      margin-left: 5px;
+    }
+  }
+  i {
+    font-size: 0.64705882352941176470588235294118em;
+    .transition(all @transition-ease);
+  }
+}

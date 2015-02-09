@@ -8,3 +8,18 @@
     .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
   }
 }
+
+#infscr-loading {
+	background-color: @white;
+	/*background-image: url('../img/loader.gif');*/
+	position: fixed;
+	text-align: center;
+	bottom: 40px;
+	left: 45%;
+	padding: 10px;
+	width: 200px;
+	z-index: 2000;
+	.border-radius(10px);
+	border:1px solid @gray-dark;
+	.box-shadow(0 0 10px 2px @gray-light);
+}

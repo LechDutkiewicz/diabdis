@@ -1,7 +1,7 @@
 <?php
 
 if ( !defined( 'ABSPATH' ) )
-  exit( 'No direct script access allowed' ); // Exit if accessed directly
+exit( 'No direct script access allowed' ); // Exit if accessed directly
 
 //get_template_part('templates/page', 'header'); ?>
 
@@ -14,7 +14,7 @@ if ( !defined( 'ABSPATH' ) )
 
 <div id="content">
 
-<?php while (have_posts()) : the_post(); ?>
+  <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_format()); ?>
 <?php endwhile; ?>
 
@@ -28,4 +28,13 @@ if ( !defined( 'ABSPATH' ) )
 <?php endif; ?>
 
 </div>
-<div id='more' class='btn btn-default btn-large'>Load More</div>
+
+<?php if ($wp_query->max_num_pages > 1) : ?>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div id='more' class='btn btn-cta no-bg btn-dark'><?php _e( 'Load more', 'roots'); ?></div>
+    </div>
+  </div>
+
+<?php endif; ?>

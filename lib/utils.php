@@ -53,9 +53,17 @@ function get_all_categories($parent = '') {
   return $catsList;
 }
 
+/**
+ * Return array with all post categories and custom fields with specified parent
+ */
+
 function get_children_categories($parent) {
   return get_all_categories($parent);
 }
+
+/**
+ * Renders category links for blog posts
+ */
 
 function render_category_link($categories = null, $menuLayout = null) {
 
@@ -79,7 +87,7 @@ function render_category_link($categories = null, $menuLayout = null) {
     $output .= "<li class='text-center" . $active ." " . $slug . "'>";
   }
 
-  $output .= "<a class='" . $slug . "' href='" . $link . "' title='" . $title . "'>";
+  $output .= "<a class='cat-link " . $slug . "' href='" . $link . "' title='" . $title . "'>";
   $output .= $icon . "<span class='cap'>" . $title . "</span>";
   $output .= "</a>";
 
@@ -90,6 +98,10 @@ function render_category_link($categories = null, $menuLayout = null) {
 
   endforeach;
 }
+
+/**
+ * Render social counters
+ */
 
 function render_social_counter($output) {
   if(!is_admin()) {
@@ -160,7 +172,7 @@ function the_category_claim() {
 
 }
 
-add_action( 'wp_ajax_nopriv_modal_load', 'ajax_modal_load');
+add_action( 'wp_ajax_modal_load', 'ajax_modal_load');
 
 function ajax_modal_load() {
   $output = get_template_part('/templates/blocks/modals/modal', $_POST['template']);
@@ -186,4 +198,39 @@ if ( !function_exists( 'dynamic_year' ) ) {
     return $yearCopy;
   }
 
+}
+
+// Get call to action buttons layout
+
+function get_the_cta ( $content, $layout, $block = true ) {
+
+  $args = array(
+    'search' => array(
+      'label' => __( 'Search', 'roots' ),
+      'template' => 'search',
+      'fa-icon' => 'search',
+      ),
+    'sign-up' => array(
+      'label' => __( 'Sign up to Diabdis', 'roots' ),
+      'template' => 'typeform',
+      'fa-icon' => 'sign-in',
+      ),
+    'subscribe' => array(
+      'label' => __( 'Subscribe', 'roots' ),
+      'template' => 'mailchimp',
+      'fa-icon' => 'envelope-o',
+      ),
+    );
+
+  if ( $block === true ) $display = 'btn-block';
+  $layout = $layout . ' ' . $display;
+
+  $output = "<a data-template='" . $args[$content]['template'] . "' role='button' data-target='#modal' data-toggle='modal' data-title='" . $args[$content]['label'] . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";
+
+  return $output;
+
+}
+
+function the_cta( $content, $layout, $block = true ) {
+  echo get_the_cta( $content, $layout, $block);
 }
