@@ -102,11 +102,15 @@ class Social_Counter {
 				
 					$output = $this->args['before'];
 
-					$output .= '<h4 class="share-text">'.$this->args['text'].'</h4>';
+					$output .= '<div class="header-lined inline">';
+
+					$output .= '<h3>'.$this->args['text'].'</h3>';
 
 					$output .= $this->render_button();
 
 					$output .= $this->args['after'];
+
+					$output .= '</div>';
 
 					return $output;
 				}
@@ -159,7 +163,7 @@ class Social_Counter {
 
 		foreach($this->requested_counts as $requested_count) {
 
-			$output .= "<div class='{$this->args['wrapper_class']} flat round social-share-button clear  social-share-{$requested_count}'>";
+			$output .= "<div class='social-share-{$requested_count}'>";
 
 			$output .= $this->render_sharer($requested_count);
 
@@ -197,9 +201,11 @@ class Social_Counter {
 
 		//$output .= "<{$this->args['tag_count']} class='{$type}-count social-share-button-count {$this->args['count_class']}'>{$count}</{$this->args['tag_count']}>";
 
-		$output .= "<a class='{$type}' onclick='{$onclick}' href='{$sharer_url_string}' title='{$title_attr}' rel='nofollow'>";
+		$output .= "<a class='{$type} margin right-tiny' onclick='{$onclick}' href='{$sharer_url_string}' title='{$title_attr}' rel='nofollow'>";
 
-		$output .= "<span class='fa-stack fa-lg'><i class='fa fa-square-o fa-stack-2x'></i><i class='fa fa-{$type} fa-stack-1x'></i>";
+		//$output .= "<span class='fa-stack fa-lg'><i class='fa fa-square-o fa-stack-2x'></i><i class='fa fa-{$type} fa-stack-1x'></i>";
+
+		$output .= "<i class='fa fa-{$type}-square'></i>";
 
 		$output .= "</a>";
 

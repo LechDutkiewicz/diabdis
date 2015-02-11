@@ -38,9 +38,10 @@
 	i {
 		margin-right: @padding-base-vertical;
 	}
-	&:hover, &:focus {
-		span {
-			text-decoration: underline;
+	&.feed {
+		margin-bottom: @margin-small;
+		&:not(:hover) {
+			color: @gray;
 		}
 	}
 }
@@ -54,7 +55,7 @@
 			bottom: 0;
 			left: 0;
 			line-height: 1.875em;
-			padding: 0 10px;
+			padding: 0 @padding-small;
 			.transition(all @transition-ease);
 			&:after {
 				content: "";
@@ -76,5 +77,33 @@
 				}
 			}
 		}
+	}
+}
+
+/*
+* MODALS
+*/
+.modal-absolute {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	.modal-content {
+		height: 100%;
+		.modal-footer {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+.modal-body {
+	&.loading {
+		background: url('../img/ajax-loader.gif') center center no-repeat;
+	}
+	iframe {
+		.square(100%);
 	}
 }

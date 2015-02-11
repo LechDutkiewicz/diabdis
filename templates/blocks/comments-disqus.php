@@ -5,6 +5,9 @@ if ( !defined( 'ABSPATH' ) )
 
 ?>
 
+<div class="header-lined">
+        <h3><?php _e( 'Comments', 'roots'); ?></h3>
+</div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -19,5 +22,5 @@ if ( !defined( 'ABSPATH' ) )
         	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-</script>
-<noscript><?php echo sprintf( __('Please enable JavaScript to view the %s comments powered by Disqus. %e'), '<a href="https://disqus.com/?ref_noscript">', '</a>'); ?></noscript>
+        </script>
+        <noscript><?php echo sprintf( __('Please enable JavaScript to view the %s comments powered by Disqus. %e'), '<a href="https://disqus.com/?ref_noscript">', '</a>'); ?></noscript>

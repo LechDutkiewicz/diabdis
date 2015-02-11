@@ -65,7 +65,7 @@ function get_children_categories($parent) {
  * Renders category links for blog posts
  */
 
-function render_category_link($categories = null, $menuLayout = null) {
+function render_category_link($categories = null, $menuLayout = null, $layout = null) {
 
   if(!$categories) {
     $categories = get_the_category();
@@ -87,7 +87,7 @@ function render_category_link($categories = null, $menuLayout = null) {
     $output .= "<li class='text-center" . $active ." " . $slug . "'>";
   }
 
-  $output .= "<a class='cat-link " . $slug . "' href='" . $link . "' title='" . $title . "'>";
+  $output .= "<a class='cat-link " . $slug . " " . $layout . "' href='" . $link . "' title='" . $title . "'>";
   $output .= $icon . "<span class='cap'>" . $title . "</span>";
   $output .= "</a>";
 
@@ -111,6 +111,8 @@ function render_social_counter($output) {
         'twitter',
         'google-plus'
         ),
+      'before' => null,
+      'after' => null
       );
 
     $social_counter = new Social_Counter($defaults);
@@ -172,7 +174,7 @@ function the_category_claim() {
 
 }
 
-add_action( 'wp_ajax_modal_load', 'ajax_modal_load');
+add_action( 'wp_ajax_nopriv_modal_load', 'ajax_modal_load');
 
 function ajax_modal_load() {
   $output = get_template_part('/templates/blocks/modals/modal', $_POST['template']);
@@ -233,4 +235,46 @@ function get_the_cta ( $content, $layout, $block = true ) {
 
 function the_cta( $content, $layout, $block = true ) {
   echo get_the_cta( $content, $layout, $block);
+}
+
+// Display properly formatted phone number
+
+function phone_number( $format = true, $phone = null ) {
+
+  $phone = $phone ? $phone : get_field('blog_root_phone', 'options');
+
+  //$phone = str_replace( '-', '', $phone);
+
+  //$phone = str_replace( ' ', '', $phone);
+
+  $phone = preg_replace('/\D/', '', $phone);
+
+  if ( $format === true ) {
+
+  $output = preg_replace('/^(.*?)(.{3})(.{2})(.{2})$/', '$1 $2 $3 $4', $phone);
+
+  } else {
+
+  $output = preg_replace('/^(.*?)(.{3})(.{3})$/', '$1-$2-$3', $phone);
+
+  }
+
+  echo $output;
+
+}
+
+// Rotate 13 encrypting emails
+
+function coded_email( $email = null ) {
+  echo get_coded_email ($email);
+
+}
+
+function get_coded_email( $email = null ) {
+
+  $email = $email ? $email : get_field('blog_root_email', 'options');
+
+  $output = str_rot13("<a href='mailto: " . $email . "'>" . $email . "</a><br />");
+
+  return $output;
 }

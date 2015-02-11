@@ -12,7 +12,13 @@ exit( 'No direct script access allowed' ); // Exit if accessed directly
   <?php get_search_form(); ?>
 <?php endif; ?>
 
-<div id="content">
+<div id="content" class="content-feed infi-scr-container">
+
+  <?php if (have_posts()) : ?>
+  <div class="header-lined">
+    <h2><?php _e( 'Articles', 'roots'); ?></h2>
+  </div>
+<?php endif; ?>
 
   <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_format()); ?>

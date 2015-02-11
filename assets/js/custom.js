@@ -1,9 +1,17 @@
 (function ($) {
 
-  $('#content').infinitescroll({
+  function resizeModal(modal) {
+    var ch = modal.elements.content.innerHeight(),
+    hh = modal.elements.header.innerHeight(),
+    fh = modal.elements.footer.innerHeight(),
+    bh = ch - (hh + fh);
+    modal.elements.body.innerHeight( bh );
+  }
+
+  $('.infi-scr-container').infinitescroll({
       navSelector  : "nav.post-nav", // selector for the paged navigation (it will be hidden)
       nextSelector : ".post-nav .pager .previous a", // selector for the NEXT link (to page 2)
-      itemSelector : "#content article.post", // selector for all items you'll retrieve
+      itemSelector : ".infi-scr-container article.post", // selector for all items you'll retrieve
       loading : {
         img: img,
         msgText: msgText,
@@ -25,78 +33,91 @@
     }
   });
 
-  $("button[data-toggle='modal']").click(function(){
-    /*var chosenmethod = $(this).val();
-  $.ajax({  
-    type: 'GET',  
-    url: '<?php echo admin_url('admin-ajax.php');?>',  
-    data: { action : 'CCAjax', chosen : chosenmethod },  
-    success: function(textStatus){  
-       $( '.default-form' ).html( textStatus ); 
-    },  
-    error: function(MLHttpRequest, textStatus, errorThrown){  
-        alert(errorThrown);  
-    }  
-  }); */ 
-});
-
   // change modal title
+
+  $('[data-dismiss="modal"]').click(function(){
+    var modal = $('#modal'),
+    modalBody = modal.find('.modal-body');
+
+    modalBody.removeClass('loading');
+  });
 
   $('[data-toggle="modal"]').click(function(){
 
     var template = $(this).attr('data-template'),
     modal = $('#modal'),
-    modalBody = modal.find('.modal-body');
+    modalContent = modal.find('.modal-content'),
+    modalHeader = modal.find('.modal-header'),
+    modalBody = modal.find('.modal-body'),
+    modalFooter = modal.find('.modal-footer');
 
-    /*$.ajax({
-      type:'post',
-      url:modalBody,
-      data:'template=' + template,
-      statusCode: {
-        404: function() {
-          alert( "page not found" );
-        }
-      }
-    }).done(function(html){
+    var data = {
+      'action': 'modal_load',
+      'template': template
+    };
+
+    $.post(ajaxurl, data, function(response) {
       if (modal.attr('data-template') !== template) {
-        modal.attr('data-template', template).find('.modal-body').html(html);
+        modalBody.addClass('loading');
+        modal.attr('data-template', template);
+        modalBody.html(response).removeClass('loading');
+        modalContainer.resize();
       }
-    });*/
 
-  var data = {
-    'action': 'modal_load',
-    'template': template
-  };
+    });
 
-  modalBody.addClass('loading');
+/*$.post(ajaxurl, data, function(response) {
+  if (modal.container.body.attr('data-template') !== template) {
+    modal.elements.body.addClass('loading');
+    modal.container.body.attr('data-template', template);
+    modal.elements.body.html(response).removeClass('loading');
+    modal.resize();
+  }
 
-  $.post(ajaxurl, data, function(response) {
-    if (modal.attr('data-template') !== template) {
-      modal.attr('data-template', template);
-      modalBody.html(response).removeClass('loading');
-    }
-  });
+});*/
 
 });
 
-  $('#modal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget),
-    recipient = button.data('title'),
-    modal = $(this);
+$('#modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget),
+  recipient = button.data('title'),
+  modal = $(this);
 
-    modal.find('.modal-title').text(recipient);
+  modal.find('.modal-title').text(recipient);
 
-  });
+});
+
+// Lisf of contents scroll
+
+listOfContents = {
+  args: {
+    article: $('main > article'),
+    list: $('aside.list-of-contents'),
+    elements: $('aside.list-of-contents a'),
+  },
+  init: function() {
+    listOfContents.args.elements.bind('click', function(){
+      var targetID = $(this).attr('data-target'),
+      target = listOfContents.args.article.find('#' + targetID);
+      //alert(listOfContents.args.article.find('#' + target).html());
+      $('body, html').animate({
+        scrollTop: target.offset().top-70
+      });
+    });
+  }
+};
+
+listOfContents.init();
 
 
-  $(document).ready(function(){
+$(document).ready(function(){
 
-    $('#pagination').hide();
+  //$('#pagination').hide();
 
-    catNavi = {
-      args: {
-        navi: $('.cat-navi'),
-        items: $('.cat-navi > li:not(.active)'),
+  catNavi = {
+    args: {
+      navi: $('.cat-navi'),
+      items: $('.cat-navi > li:not(.active)'),
         //activeItems: $('.cat-navi > li.active')
       },
       init: function() {

@@ -5,7 +5,7 @@ if ( !defined( 'ABSPATH' ) )
 ?>
 <aside class='list-of-contents'>
 	<header>
-		<h3 class='section-title'><?php _e('List of contents', 'root'); ?></h3>
+		<h4 class='section-title'><?php _e('List of contents', 'root'); ?></h4>
 	</header>
 	<ol>
 		<?php
@@ -14,7 +14,7 @@ if ( !defined( 'ABSPATH' ) )
 		$counter++;
 		?>
 		<li>
-			<a href="#<?php echo sanitize_title(get_sub_field('paragraph_title')); ?>"><?php the_sub_field('paragraph_title')?></a>
+			<a href="#<?php echo sanitize_title(get_sub_field('paragraph_title')); ?>" data-target="<?php echo sanitize_title(get_sub_field('paragraph_title')); ?>"><?php the_sub_field('paragraph_title')?></a>
 		</li>
 		<?php
 		endwhile;

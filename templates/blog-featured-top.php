@@ -5,7 +5,7 @@ if ( !defined( "ABSPATH" ) )
 
 ?>
 
-<div class="row">
+<div class="row featured-content">
 
 <?php
 

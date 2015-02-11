@@ -5,4 +5,6 @@ if ( !defined( 'ABSPATH' ) )
 
 ?>
 
-<a data-template="mailchimp" role="button" data-target="#modal" data-toggle="modal" data-title="<?php _e( 'Subscribe', 'roots' ); ?>" class="btn btn-default btn-large"><?php _e( 'Subscribe', 'roots' ); ?></a>
+<?php the_field('subscribe_blog_content', 'options'); ?>
+
+<?php the_cta(get_field('subscribe_blog_button', 'options'), 'btn-blue', false); ?>

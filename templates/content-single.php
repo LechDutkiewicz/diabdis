@@ -5,7 +5,7 @@ if ( !defined( 'ABSPATH' ) )
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
+  <article <?php post_class('margin bottom'); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <?php get_template_part('templates/entry-meta'); ?>
@@ -20,19 +20,19 @@ if ( !defined( 'ABSPATH' ) )
     <div class="entry-tags">
       <?php get_template_part('templates/blocks/post/post', 'tags'); ?>
     </div>
-    <div class="sm-share">
+  </article>
+  <aside class="margin bottom-huge">
+    <div class="sm-share margin top bottom-huge">
       <?php get_template_part('templates/blocks/sm', 'share'); ?>
     </div>
-    <div class="subscribe">
+    <div class="subscribe text-center margin bottom-huge">
       <?php get_template_part('templates/blocks/subscribe'); ?>
     </div>
-    <div class="comments">
+    <div class="comments margin bottom-big">
       <?php get_template_part('templates/blocks/comments', 'disqus'); ?>
     </div>
-    <aside class="related-posts">
+    <div class="related-posts content-feed infi-scr-container">
       <?php get_template_part('templates/blocks/post/post', 'related'); ?>
-    </aside>
-    <footer>
-    </footer>
-  </article>
+    </div>
+  </aside>
 <?php endwhile; ?>

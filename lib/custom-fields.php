@@ -22,7 +22,7 @@ $categories = get_categories();
 
 function mthemes_acf_settings( $settings ) {
 	$settings['title'] = __( 'Theme Options', 'roots');
-	$settings['pages'] = array( 'General', 'Featured Posts' );
+	$settings['pages'] = array( 'General', 'Featured Posts', 'Buttons' );
 	return $settings;
 }
 
@@ -218,11 +218,43 @@ if ( function_exists( "register_field_group" ) ) {
 		'id' => 'theme_options',
 		'title' => __( 'Theme Options', 'roots'),
 		'fields' => array(
-			array(
+			/*array(
 				'key' => 'field_24621412352325r',
 				'label' => __( 'Category of blog posts', 'roots'),
 				'name' => 'blog_root_cat',
 				'type' => 'categories',
+				'hide_empty' => 0,
+				'required' => 1,
+				),*/
+			array(
+				'key' => 'field_24622346dndgjdxxx52325r',
+				'label' => __( 'Company name', 'roots'),
+				'name' => 'blog_root_name',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
+			array(
+				'key' => 'field_24622swr34252325r',
+				'label' => __( 'Company address', 'roots'),
+				'name' => 'blog_root_address',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
+			array(
+				'key' => 'field_24622352352552325r',
+				'label' => __( 'Company email', 'roots'),
+				'name' => 'blog_root_email',
+				'type' => 'email',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
+			array(
+				'key' => 'field_24622346dfhdf552325r',
+				'label' => __( 'Company phone', 'roots'),
+				'name' => 'blog_root_phone',
+				'type' => 'text',
 				'hide_empty' => 0,
 				'required' => 1,
 				),
@@ -333,4 +365,49 @@ if ( function_exists( "register_field_group" ) ) {
 			'menu_order' => 2,
 			) );
 	}
+
+
+// content for subscription buttons
+
+	register_field_group( array(
+		'id' => 'theme_blog_buttons',
+		'title' => __( 'Contents of subscription buttons sections', 'roots' ),
+		'fields' => array(
+			array(
+				'key' => 'field_15325325s12',
+				'label' => __( 'Content before subscription button after post contents', 'roots'),
+				'name' => 'subscribe_blog_content',
+				'type' => 'wysiwyg'
+				),
+			array(
+				'key' => 'field_115321525s12',
+				'label' => __( 'Type of subscription button', 'roots'),
+				'name' => 'subscribe_blog_button',
+				'type' => 'select',
+				'choices' => array(
+					'sign-up' => __( 'Sign up typeform', 'roots'),
+					'subscribe' => __( 'Mailchimp form', 'roots')
+					),
+				),
+			),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options-buttons',
+					'order_no' => 1,
+					'group_no' => 1,
+					),
+				),
+			),
+		'options' => array(
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array(
+				),
+			),
+		'menu_order' => 1,
+		));
+
 }

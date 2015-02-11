@@ -1,20 +1,29 @@
+<?php
+
+if ( !defined( 'ABSPATH' ) )
+	exit( 'No direct script access allowed' ); // Exit if accessed directly
+
+?>
+
 <footer class="content-info" role="contentinfo">
 	<div class="container text-center">
 		<?php dynamic_sidebar('sidebar-footer'); ?>
 		<div class="horizontal-line">
-			<a href="tel:223-073-787">
+			<a href="tel:<?php phone_number( false ); ?>">
 				<span class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-phone fa-inverse fa-stack-1x"></i>
+					<i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+					<i class="fa fa-phone fa-stack-1x"></i>
 				</span>
 			</a>
 		</div>
-		<div class="address">
-			<p class="bolded"> Diabdis Sp. z.o.o.</p>
-			<p> ul. Kopernika 4/7, 40-064 Katowice <br>email: <a href="mailto:pomoc@diabdis.com">pomoc@diabdis.com</a><br>tel: <a href="tel:223-073-787">22 307 37 87</a></p>
-		</div>
+		<address class="company-address">
+			<p class="company-name"><?php the_field('blog_root_name', 'options'); ?></p>
+			<?php the_field('blog_root_address', 'options'); ?><br />
+			<?php _e( 'email:', 'roots'); ?> <?php get_template_part('templates/blocks/email', 'decrypted'); ?>
+			<?php _e( 'tel:', 'roots'); ?> <a href="tel:<?php phone_number( false ); ?>"><?php phone_number(); ?></a>
+		</address>
 		<div class="footers">
-			<p>© <?php echo dynamic_year(); ?> Diabdis. Wszelkie prawa zastrzeżone.</p>
+			<p>© <?php echo dynamic_year(); ?> <?php _e( 'Diabdis. Wszelkie prawa zastrzeżone.', 'roots'); ?></p>
 		</div>
 	</div>
 	
@@ -22,10 +31,14 @@
 	var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 	</script>
 
-  <script type="text/javascript">
-  var img= "<?php echo get_template_directory_uri() . '/assets/img/ajax-loader.gif'; ?>",
-  msgText= "<?php _e( 'Loading next posts', 'roots'); ?>",
-  finishedMsg= "<?php _e( 'There is no more posts to load', 'roots'); ?>";
-  </script>
+	<script type="text/javascript">
+
+	/* Setup variables for infinite scroll options */
+
+	var img= "<?php echo get_template_directory_uri() . '/assets/img/ajax-loader.gif'; ?>",
+	msgText= "<?php _e( 'Loading next posts', 'roots'); ?>",
+	finishedMsg= "<?php _e( 'There is no more posts to load', 'roots'); ?>";
+
+	</script>
 
 </footer>
