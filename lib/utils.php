@@ -46,10 +46,6 @@ function get_all_categories($parent = '') {
     $args['parent'] = $parent;
   }
   $catsList = get_terms('category', $args);
-  /*$output = array();
-  foreach ($catsList as $cat) {
-    $output[] = $cat;
-  }*/
   return $catsList;
 }
 
@@ -119,8 +115,6 @@ function render_social_counter($output) {
 
     echo $social_counter->render_alone();
 
-    //add_filter('the_content', array($social_counter, 'render_alone'), 999, 1);
-
   }
 }
 
@@ -136,19 +130,11 @@ function get_category_image() {
   $currentCat = get_current_category();
   $img = get_field('cat_img', "{$currentCat->taxonomy}_{$currentCat->term_id}");
 
-  $size='full';
+  $size='category';
 
   $thumb = wp_get_attachment_image_src( $img['id'], $size );
   $url = $thumb['0'];
   return $url;
-
-  /*get_the_image(array(
-    'post_id' => $img['id'],
-    'link_to_post' => false,
-    'image_class' => array('img-responsive', 'img-full'),
-    'meta_key' => false,
-    'size' => 'full'
-    ));*/
 
 }
 
@@ -204,7 +190,7 @@ if ( !function_exists( 'dynamic_year' ) ) {
 
 // Get call to action buttons layout
 
-function get_the_cta ( $content, $layout, $block = true ) {
+function get_the_cta( $content, $layout, $block = true ) {
 
   $args = array(
     'search' => array(
@@ -242,10 +228,6 @@ function the_cta( $content, $layout, $block = true ) {
 function phone_number( $format = true, $phone = null ) {
 
   $phone = $phone ? $phone : get_field('blog_root_phone', 'options');
-
-  //$phone = str_replace( '-', '', $phone);
-
-  //$phone = str_replace( ' ', '', $phone);
 
   $phone = preg_replace('/\D/', '', $phone);
 

@@ -19,7 +19,6 @@ if ($tags) {
 	$args=array(
 		'tag__in' => $tag_ids,
 		'post__not_in' => array($post->ID),
-                //'posts_per_page'=>2, // Number of related posts to display.
 		'caller_get_posts'=>1
 		);
 
@@ -28,6 +27,7 @@ if ($tags) {
 	while( $my_query->have_posts() ) {
 		$my_query->the_post();
 		?>
+		
 		<?php get_template_part('templates/content', get_post_format()); ?>
 
 		<?php }

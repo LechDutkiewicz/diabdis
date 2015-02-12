@@ -12,10 +12,10 @@ if ( !defined( 'ABSPATH' ) )
 			</a>
 			<?php render_category_link( null, null, 'feed' ); ?>
 		</header>
-		<div class="feat-img col-md-3">
+		<div class="feat-img col-lg-3 col-md-3 col-sm-4 col-xs-4">
 			<?php get_template_part('templates/blocks/post/post', 'thumb'); ?>
 		</div>
-		<div class="post-excerpt col-md-9">
+		<div class="post-excerpt col-lg-9 col-md-9 col-sm-8 col-xs-8">
 			<?php get_template_part('templates/blocks/post/post', 'excerpt'); ?>
 			<?php get_template_part('templates/blocks/post/post', 'read-more'); ?>
 		</div>

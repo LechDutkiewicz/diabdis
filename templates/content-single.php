@@ -26,7 +26,7 @@ if ( !defined( 'ABSPATH' ) )
       <?php get_template_part('templates/blocks/sm', 'share'); ?>
     </div>
     <div class="subscribe text-center margin bottom-huge">
-      <?php get_template_part('templates/blocks/subscribe'); ?>
+      <?php get_template_part('templates/blocks/post/subscribe'); ?>
     </div>
     <div class="comments margin bottom-big">
       <?php get_template_part('templates/blocks/comments', 'disqus'); ?>

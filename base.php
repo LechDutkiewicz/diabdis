@@ -26,11 +26,11 @@
       ?>
 
       <div class="content row">
-        <main class="main" role="main">
+        <main id="main" class="main" role="main">
           <?php include roots_template_path(); ?>
         </main><!-- /.main -->
         <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar" role="complementary">
+        <aside id="sidebar" class="sidebar hidden-xs hidden" role="complementary">
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
       <?php endif; ?>

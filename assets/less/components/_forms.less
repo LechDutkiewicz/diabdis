@@ -1,17 +1,21 @@
-.display-table {
-	display: table;
-	> * {
-		display: table-cell;
-		float: none;
-	}
-	&.table-full {
-		height: 100%;
-	}
-	&.vertical-middle {
+@media (min-width: @screen-md-min) {
+
+	.display-table {
+		display: table;
 		> * {
-			vertical-align: middle;
+			display: table-cell;
+			float: none;
+		}
+		&.table-full {
+			height: 100%;
+		}
+		&.vertical-middle {
+			> * {
+				vertical-align: middle;
+			}
 		}
 	}
+
 }
 
 .has-overlay {
@@ -83,6 +87,7 @@
 /*
 * MODALS
 */
+
 .modal-absolute {
 	position: absolute;
 	top: 0;
@@ -99,6 +104,22 @@
 		}
 	}
 }
+
+.modal-content {
+	overflow: hidden;
+	.close {
+		color: inherit;
+		text-shadow: inherit;
+		.opacity(1);
+	}
+}
+
+.modal-header {
+	background-color: @brand-primary;
+	color: @white;
+	border-color: @blue-dark;
+}
+
 .modal-body {
 	&.loading {
 		background: url('../img/ajax-loader.gif') center center no-repeat;
@@ -107,3 +128,56 @@
 		.square(100%);
 	}
 }
+
+/*
+* SUBSCRIBE FORM
+*/
+
+.styled-form {
+	margin: @margin 0 @margin-big;
+	text-align: center;
+	input[type=text], input[type=email], input[type=search] {
+		line-height: 44px;
+		width: 80%;
+		color: @gray-light;
+		display: block;
+		.border-radius(22px);
+		height: 42px;
+		.box-shadow(inset 0 1px 1px @gray);
+		border: 1px solid @gray-lighter;
+		padding: 0 22px;
+		margin: auto;
+		.transition(all @transition-ease);
+		&:focus {
+			.box-shadow(inset 0 1px 3px @gray);
+			border-color: @gray-light;
+		}
+	}
+	input[type=submit], button[type=submit] {
+		margin: @margin-big auto @margin-huge;
+		i {
+			margin-right: @margin-tiny;
+		}
+	}
+	.label {
+		width: 70%;
+		font-size: 0.82352941176470588235294117647059em;
+		display: block;
+		text-align: left;
+		color: @gray-light;
+		position: relative;
+		margin: auto;
+		label {
+			white-space: normal;
+		}
+	}
+	input[type=checkbox], span.checkbox {
+		position: absolute;
+		left: -26px;
+		top: -2px;
+	}
+}
+
+/*
+* FORMS
+*/

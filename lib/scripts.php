@@ -24,23 +24,9 @@ function roots_scripts() {
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
-      //'classie'   => '/assets/vendor/classie/classie.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js',
-      /*'transition' => '/assets/vendor/bootstrap/js/transition.js',
-      'alert' => '/assets/vendor/bootstrap/js/alert.js',
-      'button' => '/assets/vendor/bootstrap/js/button.js',
-      'carousel' => '/assets/vendor/bootstrap/js/carousel.js',
-      'collapse' => '/assets/vendor/bootstrap/js/collapse.js',
-      'dropdown' => '/assets/vendor/bootstrap/js/dropdown.js',
-      'modal' => '/assets/vendor/bootstrap/js/modal.js',
-      'tooltip' => '/assets/vendor/bootstrap/js/tooltip.js',
-      'popover' => '/assets/vendor/bootstrap/js/popover.js',
-      'scrollspy' => '/assets/vendor/bootstrap/js/scrollspy.js',
-      'tab' => '/assets/vendor/bootstrap/js/tab.js',
-      'affix' => '/assets/vendor/bootstrap/js/affix.js',*/
       'infiScr'   => '/assets/vendor/infinite-scroll/jquery.infinitescroll.min.js',
-      //'uiMorphingButton' => '/assets/js/uiMorphingButton.js',
-      'custom'    => '/assets/js/custom.js',
+      'custom'    => '/assets/js/_custom.js',
       );
 } else {
   $get_assets = file_get_contents(get_template_directory() . '/assets/manifest.json');
@@ -72,23 +58,9 @@ wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], fal
   }
 
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, true);
-  //wp_enqueue_script('classie', get_template_directory_uri() . $assets['classie'], array(), null, true);
   wp_enqueue_script('jquery');
-  /*wp_enqueue_script('transition', get_template_directory_uri() . $assets['transition'], array(), null, true);
-  wp_enqueue_script('alert', get_template_directory_uri() . $assets['alert'], array(), null, true);
-  wp_enqueue_script('button', get_template_directory_uri() . $assets['button'], array(), null, true);
-  wp_enqueue_script('carousel', get_template_directory_uri() . $assets['carousel'], array(), null, true);
-  wp_enqueue_script('collapse', get_template_directory_uri() . $assets['collapse'], array(), null, true);
-  wp_enqueue_script('dropdown', get_template_directory_uri() . $assets['dropdown'], array(), null, true);
-  wp_enqueue_script('modal', get_template_directory_uri() . $assets['modal'], array(), null, true);
-  wp_enqueue_script('tooltip', get_template_directory_uri() . $assets['tooltip'], array(), null, true);
-  wp_enqueue_script('popover', get_template_directory_uri() . $assets['popover'], array(), null, true);
-  wp_enqueue_script('scrollspy', get_template_directory_uri() . $assets['scrollspy'], array(), null, true);
-  wp_enqueue_script('tab', get_template_directory_uri() . $assets['tab'], array(), null, true);
-  wp_enqueue_script('affix', get_template_directory_uri() . $assets['affix'], array(), null, true);*/
   wp_enqueue_script('infiScr', get_template_directory_uri() . $assets['infiScr'], array(), null, true);
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
-  //wp_enqueue_script('uiMorphingButton', get_template_directory_uri() . $assets['uiMorphingButton'], array(), null, true);
   wp_enqueue_script('custom', get_template_directory_uri() . $assets['custom'], array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);

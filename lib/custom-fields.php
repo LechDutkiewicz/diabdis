@@ -371,7 +371,7 @@ if ( function_exists( "register_field_group" ) ) {
 
 	register_field_group( array(
 		'id' => 'theme_blog_buttons',
-		'title' => __( 'Contents of subscription buttons sections', 'roots' ),
+		'title' => __( 'Contents of subscription buttons in posts', 'roots' ),
 		'fields' => array(
 			array(
 				'key' => 'field_15325325s12',
@@ -408,6 +408,47 @@ if ( function_exists( "register_field_group" ) ) {
 				),
 			),
 		'menu_order' => 1,
+		));
+
+	register_field_group( array(
+		'id' => 'theme_subscribe_buttons',
+		'title' => __( 'Contents of subscription buttons in sidebar', 'roots' ),
+		'fields' => array(
+			array(
+				'key' => 'field_153345rdcxxc25s12',
+				'label' => __( 'Content before subscription button in sidebar', 'roots'),
+				'name' => 'subscribe_sidebar_content',
+				'type' => 'wysiwyg'
+				),
+			array(
+				'key' => 'field_1153drfhde3525s12',
+				'label' => __( 'Type of subscription button', 'roots'),
+				'name' => 'subscribe_sidebar_button',
+				'type' => 'select',
+				'choices' => array(
+					'sign-up' => __( 'Sign up typeform', 'roots'),
+					'subscribe' => __( 'Mailchimp form', 'roots')
+					),
+				),
+			),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options-buttons',
+					'order_no' => 2,
+					'group_no' => 2,
+					),
+				),
+			),
+		'options' => array(
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array(
+				),
+			),
+		'menu_order' => 2,
 		));
 
 }

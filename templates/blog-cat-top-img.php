@@ -12,7 +12,7 @@ if ( !defined( "ABSPATH" ) )
 			<div class="col-md-10">
 				<h2 class="title"><?php the_category_claim(); ?></h2>
 			</div>
-			<div class="col-md-2 text-right">
+			<div class="col-md-2 md-text-right mobile-inline">
 				<?php //get_template_part('templates/blocks/search'); ?>
 				<?php //get_template_part('templates/blocks/sign-up'); ?>
 				<?php the_cta('sign-up', 'no-bg light'); ?>

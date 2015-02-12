@@ -23,6 +23,45 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
 
+  $image_sizes = array(
+    'post-featured' => array(
+      'width'   => 750,
+      'height'  => 423,
+      'crop'    => true
+      ),
+    'sidebar-thumb' => array(
+      'width'   => 360,
+      'height'  => 203,
+      'crop'    => true
+      ),
+    'feed-thumb' => array(
+      'width'   => 290,
+      'height'  => 164,
+      'crop'    => true
+      ),
+    'featured-thumb' => array(
+      'width'   => 555,
+      'height'  => 313,
+      'crop'    => true
+      ),
+    'category' => array(
+      'width'   => 1366,
+      'height'  => 300,
+      'crop'    => true
+      ),
+    );
+
+  foreach ($image_sizes as $key => $value) {
+
+    $width = $value['width'];
+    $height = $value['height'];
+    $crop = $value['crop'];
+
+    add_image_size( $key, $width, $height, $crop);
+  }
+
+
+
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
   add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));

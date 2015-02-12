@@ -7,13 +7,13 @@ if ( !defined( 'ABSPATH' ) )
 $author = get_field('post_thumb_author');
 
 ?>
-<div class="featured-image">
+<div class="featured-image margin bottom">
 	<?php
 	get_the_image(array(
 		'link_to_post' => true,
-		'image_class' => array('img-responsive', 'img-rounded', 'img-full', 'hover-fade'),
+		'image_class' => array('img-responsive', 'img-full', 'hover-fade'),
 		'meta_key' => false,
-		'size' => 'thumbnail'
+		'size' => 'feed-thumb'
 		)
 	);
 	?>

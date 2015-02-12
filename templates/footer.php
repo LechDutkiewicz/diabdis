@@ -5,7 +5,7 @@ if ( !defined( 'ABSPATH' ) )
 
 ?>
 
-<footer class="content-info" role="contentinfo">
+<footer id="footer" class="content-info" role="contentinfo">
 	<div class="container text-center">
 		<?php dynamic_sidebar('sidebar-footer'); ?>
 		<div class="horizontal-line">
