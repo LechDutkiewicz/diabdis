@@ -5,9 +5,9 @@ if ( !defined( 'ABSPATH' ) )
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class('margin bottom'); ?>>
+  <article <?php post_class('margin bottom'); ?> itemscope itemtype="http://schema.org/Article">
     <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+      <h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
       <?php get_template_part('templates/entry-meta'); ?>
       <?php get_template_part('templates/blocks/post/post', 'feat-img'); ?>
     </header>

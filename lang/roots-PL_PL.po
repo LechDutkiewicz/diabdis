@@ -1,0 +1,427 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Roots Starter Theme\n"
+"POT-Creation-Date: 2015-02-23 14:12+0100\n"
+"PO-Revision-Date: 2015-02-23 14:18+0100\n"
+"Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
+"Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:4
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Przepraszamy, ale strona, którą próbujesz obejrzeć nie istnieje."
+
+#: 404.php:7
+msgid "It looks like this was the result of either:"
+msgstr "Wygląda to jak by było wynikiem:"
+
+#: 404.php:9
+msgid "a mistyped address"
+msgstr "źle wpisany adres"
+
+#: 404.php:10
+msgid "an out-of-date link"
+msgstr ""
+
+#: base.php:7
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+"Używasz <strong>przestarzałej</strong> przeglądarki. Proszę <a href=\"http://"
+"browsehappy.com/\">zaktualizować przeglądarkę</a> , aby poprawić "
+"doświadczenia."
+
+#: functions.php:36
+#, php-format
+msgid "Error locating %s for inclusion"
+msgstr "Błąd lokalizacji % s do włączenia"
+
+#: index.php:10 page-template-home.php:11
+msgid "Sorry, no results were found."
+msgstr "Przepraszamy, brak rezultatów wyszukiwania."
+
+#: index.php:19
+msgid "Articles"
+msgstr "Artykuły"
+
+#: index.php:30 page-template-home.php:23
+msgid "&larr; Older posts"
+msgstr "&larr; Starsze posty"
+
+#: index.php:31 page-template-home.php:24
+msgid "Newer posts &rarr;"
+msgstr "Nowsze posty &rarr;"
+
+#: index.php:42
+msgid "Load more"
+msgstr "Wczytaj więcej"
+
+#: lib/activation.php:28 lib/activation.php:29
+msgid "Theme Activation"
+msgstr "Aktywacja szablonu"
+
+#: lib/activation.php:50
+#, php-format
+msgid "%s Theme Activation"
+msgstr "%s Aktywacja szablonu"
+
+#: lib/activation.php:52
+msgid ""
+"These settings are optional and should usually be used only on a fresh "
+"installation"
+msgstr ""
+"Ustawienia te są opcjonalne i zazwyczaj powinny być używane tylko na nowej "
+"instalacji"
+
+#: lib/activation.php:59 lib/activation.php:62
+msgid "Create static front page?"
+msgstr "Czy stworzyć statyczną stronę główną?"
+
+#: lib/activation.php:64 lib/activation.php:76 lib/activation.php:88
+#: lib/activation.php:100
+msgid "Yes"
+msgstr "Tak"
+
+#: lib/activation.php:65 lib/activation.php:77 lib/activation.php:89
+#: lib/activation.php:101
+msgid "No"
+msgstr "Nie"
+
+#: lib/activation.php:67
+msgid "Create a page called Home and set it to be the static front page"
+msgstr "Stwórz stronę o nazwie Home i ustaw ją jako statyczną stronę główną"
+
+#: lib/activation.php:71
+msgid "Change permalink structure?"
+msgstr "Czy zmienić strukturę permalinków?"
+
+#: lib/activation.php:74
+msgid "Update permalink structure?"
+msgstr "Czy zaktualizować strukturę permalinków?"
+
+#: lib/activation.php:79
+msgid "Change permalink structure to /&#37;postname&#37;/"
+msgstr "Zmień strukturę permalinków: /&#37;postname&#37;/"
+
+#: lib/activation.php:83 lib/activation.php:86
+msgid "Create navigation menu?"
+msgstr "Czy stworzyć menu?"
+
+#: lib/activation.php:91
+msgid "Create the Primary Navigation menu and set the location"
+msgstr "Stwórz główne menu i ustaw jego pozycję"
+
+#: lib/activation.php:95 lib/activation.php:98
+msgid "Add pages to menu?"
+msgstr "Czy dodać strony do menu?"
+
+#: lib/activation.php:103
+msgid "Add all current published pages to the Primary Navigation"
+msgstr "Dodaj wszystkie aktualnie opublikowane strony do głównego menu"
+
+#: lib/activation.php:126 lib/activation.php:147
+msgid "Home"
+msgstr "Strona główna"
+
+#: lib/activation.php:173 lib/activation.php:176 lib/activation.php:190
+#: lib/init.php:17
+msgid "Primary Navigation"
+msgstr "Główna nawigacja"
+
+#: lib/classSocialCounter.php:74
+msgid "Share this on :"
+msgstr "Udostępnij przez:"
+
+#: lib/classSocialCounter.php:200
+#, php-format
+msgid "Share this on %s"
+msgstr "Udostępnij przez %s"
+
+#: lib/custom-fields.php:24 lib/custom-fields.php:219
+msgid "Theme Options"
+msgstr "Opcje motywu"
+
+#: lib/custom-fields.php:37
+msgid "Category parameters"
+msgstr "Parametry kategorii"
+
+#: lib/custom-fields.php:41
+msgid "Category color"
+msgstr "Kolor kategorii"
+
+#: lib/custom-fields.php:47
+msgid "Category icon"
+msgstr "Ikona kategorii"
+
+#: lib/custom-fields.php:53
+msgid "Category image"
+msgstr "Obrazek kategorii"
+
+#: lib/custom-fields.php:59
+msgid "Category claim"
+msgstr "Claim kategorii"
+
+#: lib/custom-fields.php:88 lib/custom-fields.php:140
+msgid "Post content"
+msgstr "Treść posta"
+
+#: lib/custom-fields.php:92
+msgid "Custom image author?"
+msgstr "Niestandardowy autor obrazu?"
+
+#: lib/custom-fields.php:97 lib/custom-fields.php:133
+msgid "no"
+msgstr "nie"
+
+#: lib/custom-fields.php:98 lib/custom-fields.php:134
+msgid "yes"
+msgstr "tak"
+
+#: lib/custom-fields.php:104
+msgid "About image author"
+msgstr "O autorze zdjęcia"
+
+#: lib/custom-fields.php:121
+msgid "Introduction"
+msgstr "Wstęp"
+
+#: lib/custom-fields.php:128
+msgid "Display table of contents?"
+msgstr "Wyświetl spis treści?"
+
+#: lib/custom-fields.php:157
+msgid "Post paragraphs"
+msgstr "Fragmenty posta"
+
+#: lib/custom-fields.php:174
+msgid "Paragraph title"
+msgstr "Tytuł"
+
+#: lib/custom-fields.php:182
+msgid "Paragraph content"
+msgstr "Zawartość"
+
+#: lib/custom-fields.php:192
+msgid "Add paragraph"
+msgstr "Dodaj fragment"
+
+#: lib/custom-fields.php:231
+msgid "Company name"
+msgstr "Nazwa firmy"
+
+#: lib/custom-fields.php:239
+msgid "Company address"
+msgstr "Adres firmy"
+
+#: lib/custom-fields.php:247
+msgid "Company email"
+msgstr "E-mail firmy"
+
+#: lib/custom-fields.php:255
+msgid "Company phone"
+msgstr "Telefon firmy"
+
+#: lib/custom-fields.php:282
+msgid "Featured posts on home page"
+msgstr "Wyróżnione poasty na stronie głównej"
+
+#: lib/custom-fields.php:291 lib/custom-fields.php:335
+msgid "Featured post"
+msgstr "Wyróżniony post"
+
+#: lib/custom-fields.php:326
+#, php-format
+msgid "Featured posts in %s"
+msgstr "Wyróżnione posty w% s"
+
+#: lib/custom-fields.php:374
+msgid "Contents of subscription buttons in posts"
+msgstr "Cel buttona subskrybuj w części po treśći posta"
+
+#: lib/custom-fields.php:378
+msgid "Content before subscription button after post contents"
+msgstr "Treść przed buttonem subskrybuj w części po treści posta"
+
+#: lib/custom-fields.php:384 lib/custom-fields.php:425
+msgid "Type of subscription button"
+msgstr "Rodzaj przycisku subskrypcji"
+
+#: lib/custom-fields.php:388 lib/custom-fields.php:429
+msgid "Sign up typeform"
+msgstr "Typeform do rejestracji"
+
+#: lib/custom-fields.php:389 lib/custom-fields.php:430
+msgid "Mailchimp form"
+msgstr "Formularz MailChimp"
+
+#: lib/custom-fields.php:415
+msgid "Contents of subscription buttons in sidebar"
+msgstr "Cel buttona subskrybuj w pasku bocznym"
+
+#: lib/custom-fields.php:419
+msgid "Content before subscription button in sidebar"
+msgstr "Treść przed buttonem subskrybuj w pasku bocznym"
+
+#: lib/extras.php:6
+msgid "Continued"
+msgstr "Kontynuuj"
+
+#: lib/init.php:83
+msgid "Primary"
+msgstr "Podstawowy"
+
+#: lib/init.php:92
+msgid "Footer"
+msgstr "Stopka"
+
+#: lib/titles.php:10
+msgid "Latest Posts"
+msgstr "Najnowsze Wpisy"
+
+#: lib/titles.php:15
+#, php-format
+msgid "Search Results for %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: lib/titles.php:17
+msgid "Not Found"
+msgstr "Nie znaleziono"
+
+#: lib/utils.php:198 templates/searchform.php:3 templates/searchform.php:4
+msgid "Search"
+msgstr "Szukaj"
+
+#: lib/utils.php:203 templates/modals.php:13
+msgid "Sign up to Diabdis"
+msgstr "Zarejestruj się do Diabdis"
+
+#: lib/utils.php:208
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+#: templates/blocks/comments-disqus.php:9
+msgid "Comments"
+msgstr "Komentarze"
+
+#: templates/blocks/comments-disqus.php:26
+#, php-format
+msgid "Please enable JavaScript to view the %s comments powered by Disqus. %e"
+msgstr ""
+"Proszę włączyć JavaScript, aby wyświetlić komentarze% s udostępniane przez "
+"Disqus. %e"
+
+#: templates/blocks/modals/modal-mailchimp.php:9
+msgid "Your e-mail"
+msgstr "Twój e-mail"
+
+#: templates/blocks/modals/modal-mailchimp.php:11
+msgid "Phone number"
+msgstr "Numer telefonu"
+
+#: templates/blocks/modals/modal-mailchimp.php:15
+msgid ""
+"Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z "
+"realizacją usługi świadczonej drogą elektroniczną, obsługą ew. reklamacji "
+"oraz przesyłaniem informacji o nowościach i ofertach specjalnych na Twój e-"
+"mail. Każda osoba ma prawo wglądu w swoje dane i możliwość ich poprawienia. "
+"Podanie danych ma charakter dobrowolny chodź niezbędny, by móc dokonać "
+"rejestracji w systemie Diabdis.com<br>Administratorem danych jest Diabdis "
+"Sp. z.o.o. z siedzibą w Katowicach przy ul. Kopernika 4/7."
+msgstr ""
+
+#: templates/blocks/modals/modal-mailchimp.php:18
+#: templates/blocks/modals/modal-mailchimp.php:19
+msgid "Send application"
+msgstr "Wyślij zgłoszenie"
+
+#: templates/blocks/post/post-list-of-contents.php:8
+msgid "List of contents"
+msgstr "Spis treści"
+
+#: templates/blocks/post/post-read-more.php:7
+msgid "Read more"
+msgstr "Czytaj więcej"
+
+#: templates/blocks/post/post-related.php:8
+msgid "Related posts"
+msgstr "Podobne artykuły"
+
+#: templates/blocks/post/post-tags.php:6
+msgid "Categories: "
+msgstr "Kategorie:"
+
+#: templates/comments.php:9
+#, php-format
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Jedna odpowiedź do &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s odpowiedzi do &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s odpowiedzi do &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Starsze komentarze"
+
+#: templates/comments.php:22
+msgid "Newer comments &rarr;"
+msgstr "Nowsze komentarze &rarr;"
+
+#: templates/comments.php:31
+msgid "Comments are closed."
+msgstr "Komentowanie jest wyłączone."
+
+#: templates/entry-meta.php:3
+msgid "By"
+msgstr "Przez"
+
+#: templates/footer.php:22
+msgid "email:"
+msgstr "email:"
+
+#: templates/footer.php:23
+msgid "tel:"
+msgstr "Tel.:"
+
+#: templates/footer.php:26
+msgid "Diabdis. All rights reserved."
+msgstr "Diabdis. Wszelkie prawa zastrzeżone."
+
+#: templates/footer.php:39
+msgid "Loading next posts"
+msgstr "Pobieram artkuły"
+
+#: templates/footer.php:40
+msgid "There is no more posts to load"
+msgstr "Nie ma więcej artykułów do wczytania"
+
+#: templates/modals.php:18
+msgid "Close"
+msgstr "Zamknij"
+
+#: templates/searchform.php:2
+msgid "Search for:"
+msgstr "Szukaj:"
+
+#~ msgid "Numer telefonu"
+#~ msgstr "Numer telefonu"
+
+#~ msgid "Diabdis.pl"
+#~ msgstr "Diabdis.pl"
+
+#~ msgid "Diabdis. Wszelkie prawa zastrzeżone."
+#~ msgstr "Diabdis. Wszelkie prawa zastrzeżone."

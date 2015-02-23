@@ -258,6 +258,22 @@ if ( function_exists( "register_field_group" ) ) {
 				'hide_empty' => 0,
 				'required' => 1,
 				),
+			array(
+				'key' => 'field_246222645westtgshdf552325r',
+				'label' => __( 'Facebook'),
+				'name' => 'blog_root_facebook',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
+			array(
+				'key' => 'field_24622346fsdha32f552325r',
+				'label' => __( 'Twitter'),
+				'name' => 'blog_root_twitter',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
 			),
 		'location' => array(
 			array(

@@ -23,6 +23,10 @@ if ( !defined( 'ABSPATH' ) )
       <?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
       endif;
       ?>
+      <div class="navbar-text navbar-right navbar-social text-right hidden-xs hidden-sm">
+        <a href="<?php the_field('blog_root_facebook', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="<?php the_field('blog_root_twitter', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
     </nav>
 
   </div>

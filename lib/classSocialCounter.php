@@ -71,7 +71,7 @@ class Social_Counter {
 			'tag_count' => 'span',
 			'count_class' => 'social-share-count',
 			'wrapper_class' => '',
-			'text' => __('Share this on :', 'bon-toolkit'),
+			'text' => __('Share this on :', 'roots'),
 		);
 
 		$this->args = wp_parse_args( $args, $defaults );
@@ -187,9 +187,9 @@ class Social_Counter {
 
 		$onclick = "javascript:window.open(this.href,\"\", \"width=480,height=480,scrollbars=yes,status=yes\"); return false;";
 
-		//$fnSlug = str_replace('-', '_', $type);
+		$fnSlug = str_replace('-', '_', $type);
 
-		//$count = call_user_func(array($this, "get_{$fnSlug}_count"));
+		$count = call_user_func(array($this, "get_{$fnSlug}_count"));
 
 		$sharer_url_string = str_replace('{title}', $this->title, str_replace('{link}', urlencode($this->url), $sharer_url[$type]));
 
@@ -199,8 +199,6 @@ class Social_Counter {
 
 		$title_attr = sprintf(__('Share this on %s', 'roots'), ucwords($type));
 
-		//$output .= "<{$this->args['tag_count']} class='{$type}-count social-share-button-count {$this->args['count_class']}'>{$count}</{$this->args['tag_count']}>";
-
 		$output .= "<a class='{$type} margin right-tiny' onclick='{$onclick}' href='{$sharer_url_string}' title='{$title_attr}' rel='nofollow'>";
 
 		//$output .= "<span class='fa-stack fa-lg'><i class='fa fa-square-o fa-stack-2x'></i><i class='fa fa-{$type} fa-stack-1x'></i>";
@@ -208,6 +206,8 @@ class Social_Counter {
 		$output .= "<i class='fa fa-{$type}-square'></i>";
 
 		$output .= "</a>";
+
+		$output .= "<{$this->args['tag_count']} class='{$type}-count social-share-button-count {$this->args['count_class']}'>{$count}</{$this->args['tag_count']}>";
 
 		return $output;
 

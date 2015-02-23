@@ -25,12 +25,17 @@
   };
 }(this.jQuery || this.Zepto));
 
-
 /*
 * TEMPLATE FUNCTIONS
 */
 
 (function ($) {
+
+
+function setFocusIframe() {
+  var iframe = $("#typeform")[0];
+  iframe.contentWindow.focus();
+}
 
 /*
 * INFINITE SCROLL SETUP FOR POSTS FEED SECTIONS
@@ -83,7 +88,7 @@ $(document).ajaxError(function(e,xhr,opt){
 
 
     if (modal.attr('data-template') !== template) {
-      modalBody.addClass('loading');
+      modalBody.html('').addClass('loading');
       if (template === 'typeform') {
         modalBody.animate({
           height: $(window).height() - 200 + 'px'
@@ -104,6 +109,11 @@ $(document).ajaxError(function(e,xhr,opt){
         modal.attr('data-template', template);
         modalBody.html(response).removeClass('loading');
       }
+        if (template === 'typeform') {
+          setTimeout(setFocusIframe, 100);
+        } else {
+          modalBody.find('.focus').focus();
+        }
 
     });
 

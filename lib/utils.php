@@ -99,7 +99,7 @@ function render_category_link($categories = null, $menuLayout = null, $layout = 
  * Render social counters
  */
 
-function render_social_counter($output) {
+function render_social_counter() {
   if(!is_admin()) {
     $defaults = array(
       'social_buttons' => array(
@@ -160,6 +160,7 @@ function the_category_claim() {
 
 }
 
+add_action( 'wp_ajax_modal_load', 'ajax_modal_load');
 add_action( 'wp_ajax_nopriv_modal_load', 'ajax_modal_load');
 
 function ajax_modal_load() {
@@ -259,4 +260,17 @@ function get_coded_email( $email = null ) {
   $output = str_rot13("<a href='mailto: " . $email . "'>" . $email . "</a><br />");
 
   return $output;
+}
+
+function get_thumbnail_src() {
+
+  $img = get_the_image(array(
+    'link_to_post' => false,
+    'meta_key' => false,
+    'size' => 'post-featured',
+    'format' => 'array'
+    )
+  );
+
+  return $img['src'];
 }
