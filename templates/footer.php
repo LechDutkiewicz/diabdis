@@ -40,29 +40,33 @@ if ( !defined( 'ABSPATH' ) )
 	finishedMsg= "<?php _e( 'There is no more posts to load', 'roots'); ?>";
 
 	</script>
-    
-    <!--Start of Zopim Live Chat Script-->
-    <script type="text/javascript">
-      window.$zopim || (function(d, s) {
-        var z = $zopim = function(c) {
-          z._.push(c)
-        }, $ = z.s =
-                d.createElement(s), e = d.getElementsByTagName(s)[0];
-        z.set = function(o) {
-          z.set.
-                  _.push(o)
-        };
-        z._ = [];
-        z.set._ = [];
-        $.async = !0;
-        $.setAttribute('charset', 'utf-8');
-        $.src = '//v2.zopim.com/?2HN0GQapXuR8fetz3M3SNlEUpX0Lub0I';
-        z.t = +new Date;
-        $.
-                type = 'text/javascript';
-        e.parentNode.insertBefore($, e)
-      })(document, 'script');
-    </script>
-    <!--End of Zopim Live Chat Script-->
+
+	<!--Start of Zopim Live Chat Script-->
+	<script type="text/javascript">
+	window.$zopim || (function(d, s) {
+		var z = $zopim = function(c) {
+			z._.push(c)
+		}, $ = z.s =
+		d.createElement(s), e = d.getElementsByTagName(s)[0];
+		z.set = function(o) {
+			z.set.
+			_.push(o)
+		};
+		z._ = [];
+		z.set._ = [];
+		$.async = !0;
+		$.setAttribute('charset', 'utf-8');
+		$.src = '//v2.zopim.com/?2HN0GQapXuR8fetz3M3SNlEUpX0Lub0I';
+		z.t = +new Date;
+		$.
+		type = 'text/javascript';
+		e.parentNode.insertBefore($, e)
+	})(document, 'script');
+	</script>
+	<!--End of Zopim Live Chat Script-->
 
 </footer>
+
+<!--<div id="scroll-top" class="text-center">
+	<span class="hidden text-uppercase margin right-small"><?php _e( 'Scroll to top', 'roots'); ?></span><i class="fa fa-chevron-up fa-2x"></i>
+</div>-->

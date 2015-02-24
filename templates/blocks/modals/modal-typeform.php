@@ -5,4 +5,4 @@ if ( !defined( 'ABSPATH' ) )
 
 ?>
 
-<iframe id="typeform" src="https://diabdis.typeform.com/to/Cq7QYr"></iframe>
+<iframe id="typeform" src="<?php the_field('blog_root_typeform', 'options'); ?>"></iframe>

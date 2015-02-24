@@ -24,8 +24,9 @@ if ( !defined( 'ABSPATH' ) )
       endif;
       ?>
       <div class="navbar-text navbar-right navbar-social text-right hidden-xs hidden-sm">
-        <a href="<?php the_field('blog_root_facebook', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="<?php the_field('blog_root_twitter', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="<?php the_field('blog_root_facebook', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Facebook" target="_blank"><i class="fa fa-facebook"></i><span class="hidden">Facebook</span></a>
+        <a href="<?php the_field('blog_root_twitter', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Twitter" target="_blank"><i class="fa fa-twitter"></i><span class="hidden">Twitter</span></a>
+        <a href="<?php the_field('blog_root_google_plus', 'options'); ?>" title="<?php _e('Follow us on', 'roots'); ?> Google Plus" target="_blank" rel="publisher"><i class="fa fa-google-plus"></i><span class="hidden">Google Plus</span></a>
       </div>
     </nav>
 

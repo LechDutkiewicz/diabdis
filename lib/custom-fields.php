@@ -274,6 +274,22 @@ if ( function_exists( "register_field_group" ) ) {
 				'hide_empty' => 0,
 				'required' => 1,
 				),
+			array(
+				'key' => 'field_246ha32f552325r',
+				'label' => __( 'Google plus'),
+				'name' => 'blog_root_google_plus',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
+			array(
+				'key' => 'field_24622346fseraafgerws52325r',
+				'label' => __( 'Typeform URL'),
+				'name' => 'blog_root_typeform',
+				'type' => 'text',
+				'hide_empty' => 0,
+				'required' => 1,
+				),
 			),
 		'location' => array(
 			array(

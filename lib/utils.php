@@ -69,7 +69,7 @@ function render_category_link($categories = null, $menuLayout = null, $layout = 
 
   foreach ($categories as $category) :
 
-  $link = get_category_link($category->term_id);
+    $link = get_category_link($category->term_id);
   $title = $category->name;
   $slug = $category->slug;
   $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
@@ -195,7 +195,7 @@ function get_the_cta( $content, $layout, $block = true ) {
 
   $args = array(
     'search' => array(
-      'label' => __( 'Search', 'roots' ),
+      'label' => __( 'Search articles', 'roots' ),
       'template' => 'search',
       'fa-icon' => 'search',
       ),
@@ -214,7 +214,11 @@ function get_the_cta( $content, $layout, $block = true ) {
   if ( $block === true ) $display = 'btn-block';
   $layout = $layout . ' ' . $display;
 
-  $output = "<a data-template='" . $args[$content]['template'] . "' role='button' data-target='#modal' data-toggle='modal' data-title='" . $args[$content]['label'] . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";
+  if (wp_is_mobile() && $args[$content]['template'] === 'typeform') {
+    $output = "<a href='" . get_field('blog_root_typeform', 'options') . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";    
+  } else {
+    $output = "<a data-template='" . $args[$content]['template'] . "' role='button' data-target='#modal' data-toggle='modal' data-title='" . $args[$content]['label'] . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";  
+  }
 
   return $output;
 
@@ -234,11 +238,11 @@ function phone_number( $format = true, $phone = null ) {
 
   if ( $format === true ) {
 
-  $output = preg_replace('/^(.*?)(.{3})(.{2})(.{2})$/', '$1 $2 $3 $4', $phone);
+    $output = preg_replace('/^(.*?)(.{3})(.{2})(.{2})$/', '$1 $2 $3 $4', $phone);
 
   } else {
 
-  $output = preg_replace('/^(.*?)(.{3})(.{3})$/', '$1-$2-$3', $phone);
+    $output = preg_replace('/^(.*?)(.{3})(.{3})$/', '$1-$2-$3', $phone);
 
   }
 

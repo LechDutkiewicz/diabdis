@@ -30,7 +30,7 @@
           <?php include roots_template_path(); ?>
         </main><!-- /.main -->
         <?php if (roots_display_sidebar()) : ?>
-        <aside id="sidebar" class="sidebar hidden-xs hidden" role="complementary">
+        <aside id="sidebar" class="sidebar hidden-xs" role="complementary">
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
       <?php endif; ?>

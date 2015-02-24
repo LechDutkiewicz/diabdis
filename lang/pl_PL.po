@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Roots Starter Theme\n"
-"POT-Creation-Date: 2015-02-23 14:12+0100\n"
-"PO-Revision-Date: 2015-02-23 14:18+0100\n"
+"POT-Creation-Date: 2015-02-24 16:30+0100\n"
+"PO-Revision-Date: 2015-02-24 16:32+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -34,7 +34,7 @@ msgstr "źle wpisany adres"
 
 #: 404.php:10
 msgid "an out-of-date link"
-msgstr ""
+msgstr "nieaktualny link"
 
 #: base.php:7
 msgid ""
@@ -235,44 +235,60 @@ msgstr "E-mail firmy"
 msgid "Company phone"
 msgstr "Telefon firmy"
 
-#: lib/custom-fields.php:282
+#: lib/custom-fields.php:263
+msgid "Facebook"
+msgstr "Facebook"
+
+#: lib/custom-fields.php:271
+msgid "Twitter"
+msgstr "Twitter"
+
+#: lib/custom-fields.php:279
+msgid "Google plus"
+msgstr "Google Plus"
+
+#: lib/custom-fields.php:287
+msgid "Typeform URL"
+msgstr "Adres URL Typeform"
+
+#: lib/custom-fields.php:314
 msgid "Featured posts on home page"
 msgstr "Wyróżnione poasty na stronie głównej"
 
-#: lib/custom-fields.php:291 lib/custom-fields.php:335
+#: lib/custom-fields.php:323 lib/custom-fields.php:367
 msgid "Featured post"
 msgstr "Wyróżniony post"
 
-#: lib/custom-fields.php:326
+#: lib/custom-fields.php:358
 #, php-format
 msgid "Featured posts in %s"
 msgstr "Wyróżnione posty w% s"
 
-#: lib/custom-fields.php:374
+#: lib/custom-fields.php:406
 msgid "Contents of subscription buttons in posts"
 msgstr "Cel buttona subskrybuj w części po treśći posta"
 
-#: lib/custom-fields.php:378
+#: lib/custom-fields.php:410
 msgid "Content before subscription button after post contents"
 msgstr "Treść przed buttonem subskrybuj w części po treści posta"
 
-#: lib/custom-fields.php:384 lib/custom-fields.php:425
+#: lib/custom-fields.php:416 lib/custom-fields.php:457
 msgid "Type of subscription button"
 msgstr "Rodzaj przycisku subskrypcji"
 
-#: lib/custom-fields.php:388 lib/custom-fields.php:429
+#: lib/custom-fields.php:420 lib/custom-fields.php:461
 msgid "Sign up typeform"
 msgstr "Typeform do rejestracji"
 
-#: lib/custom-fields.php:389 lib/custom-fields.php:430
+#: lib/custom-fields.php:421 lib/custom-fields.php:462
 msgid "Mailchimp form"
 msgstr "Formularz MailChimp"
 
-#: lib/custom-fields.php:415
+#: lib/custom-fields.php:447
 msgid "Contents of subscription buttons in sidebar"
 msgstr "Cel buttona subskrybuj w pasku bocznym"
 
-#: lib/custom-fields.php:419
+#: lib/custom-fields.php:451
 msgid "Content before subscription button in sidebar"
 msgstr "Treść przed buttonem subskrybuj w pasku bocznym"
 
@@ -301,9 +317,9 @@ msgstr "Wyniki wyszukiwania dla: %s"
 msgid "Not Found"
 msgstr "Nie znaleziono"
 
-#: lib/utils.php:198 templates/searchform.php:3 templates/searchform.php:4
-msgid "Search"
-msgstr "Szukaj"
+#: lib/utils.php:198 templates/searchform.php:3
+msgid "Search articles"
+msgstr "Szukaj artykułów"
 
 #: lib/utils.php:203 templates/modals.php:13
 msgid "Sign up to Diabdis"
@@ -325,14 +341,17 @@ msgstr ""
 "Disqus. %e"
 
 #: templates/blocks/modals/modal-mailchimp.php:9
+#: templates/blocks/modals/modal-mailchimp.php:30
 msgid "Your e-mail"
 msgstr "Twój e-mail"
 
 #: templates/blocks/modals/modal-mailchimp.php:11
+#: templates/blocks/modals/modal-mailchimp.php:35
 msgid "Phone number"
 msgstr "Numer telefonu"
 
 #: templates/blocks/modals/modal-mailchimp.php:15
+#: templates/blocks/modals/modal-mailchimp.php:42
 msgid ""
 "Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z "
 "realizacją usługi świadczonej drogą elektroniczną, obsługą ew. reklamacji "
@@ -345,8 +364,29 @@ msgstr ""
 
 #: templates/blocks/modals/modal-mailchimp.php:18
 #: templates/blocks/modals/modal-mailchimp.php:19
+#: templates/blocks/modals/modal-mailchimp.php:51
 msgid "Send application"
 msgstr "Wyślij zgłoszenie"
+
+#: templates/blocks/modals/modal-mailchimp.php:28
+msgid "indicates required"
+msgstr "pola wymagane"
+
+#: templates/blocks/modals/modal-mailchimp.php:75
+msgid "This field is required."
+msgstr "To pole jest wymagane."
+
+#: templates/blocks/modals/modal-mailchimp.php:76
+msgid "Please fill this field."
+msgstr "Prosimy o wypełnienie tego pola."
+
+#: templates/blocks/modals/modal-mailchimp.php:77
+msgid "Please type correct email address."
+msgstr "Prosimy o wpisanie poprawnego adresu email."
+
+#: templates/blocks/modals/modal-mailchimp.php:78
+msgid "Please type numbers only."
+msgstr "Prosimy o wpisanie tylko liczb."
 
 #: templates/blocks/post/post-list-of-contents.php:8
 msgid "List of contents"
@@ -409,6 +449,14 @@ msgstr "Pobieram artkuły"
 msgid "There is no more posts to load"
 msgstr "Nie ma więcej artykułów do wczytania"
 
+#: templates/footer.php:71
+msgid "Scroll to top"
+msgstr "Przewiń do góry"
+
+#: templates/header.php:27 templates/header.php:28 templates/header.php:29
+msgid "Follow us on"
+msgstr "Dołącz do nas na"
+
 #: templates/modals.php:18
 msgid "Close"
 msgstr "Zamknij"
@@ -416,6 +464,10 @@ msgstr "Zamknij"
 #: templates/searchform.php:2
 msgid "Search for:"
 msgstr "Szukaj:"
+
+#: templates/searchform.php:4
+msgid "Search"
+msgstr "Szukaj"
 
 #~ msgid "Numer telefonu"
 #~ msgstr "Numer telefonu"
