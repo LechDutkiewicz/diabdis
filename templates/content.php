@@ -7,7 +7,7 @@ if ( !defined( 'ABSPATH' ) )
 <article <?php post_class('feed-article article-bordered'); ?>>
 	<div class="row">
 		<header class="col-md-12">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+			<a href="<?php the_permalink(); ?>" title="<?php echo __( 'Read more', 'roots') . " " . __( 'about', 'roots') . " '" . get_the_title() . "'"; ?>">
 				<h3 class="entry-title"><?php the_title(); ?></h3>
 			</a>
 			<?php render_category_link( null, null, 'feed' ); ?>

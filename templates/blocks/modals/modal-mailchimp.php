@@ -72,16 +72,18 @@ if ( !defined( 'ABSPATH' ) )
  */
 
  
-   $.extend($.validator.messages, {
+   setTimeout(function(){
+    $.extend($.validator.messages, {
     required: "<?php _e( 'This field is required.', 'roots'); ?>",
     remote: "<?php _e( 'Please fill this field.', 'roots'); ?>",
     email: "<?php _e( 'Please type correct email address.', 'roots'); ?>",
     digits: "<?php _e( 'Please type numbers only.', 'roots'); ?>",
   });  
+  }, 1000);
  
 
 }(jQuery));
-/*var $mcj = jQuery.noConflict(true);*/
+var $mcj = jQuery.noConflict(true);
 </script>
 
 <!--End mc_embed_signup-->

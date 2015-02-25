@@ -83,7 +83,7 @@ function render_category_link($categories = null, $menuLayout = null, $layout = 
     $output .= "<li class='text-center" . $active ." " . $slug . "'>";
   }
 
-  $output .= "<a class='cat-link " . $slug . " " . $layout . "' href='" . $link . "' title='" . $title . "'>";
+  $output .= "<a class='cat-link " . $slug . " " . $layout . "' href='" . $link . "' title='" . __( 'Read more posts in category', 'roots') . " " . $title . "'>";
   $output .= $icon . "<span class='cap'>" . $title . "</span>";
   $output .= "</a>";
 
@@ -215,9 +215,9 @@ function get_the_cta( $content, $layout, $block = true ) {
   $layout = $layout . ' ' . $display;
 
   if (wp_is_mobile() && $args[$content]['template'] === 'typeform') {
-    $output = "<a href='" . get_field('blog_root_typeform', 'options') . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";    
+    $output = "<a href='" . get_field('blog_root_typeform', 'options') . "' class='btn btn-cta " . $layout . "' title='" . $args[$content]['label'] . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";    
   } else {
-    $output = "<a data-template='" . $args[$content]['template'] . "' role='button' data-target='#modal' data-toggle='modal' data-title='" . $args[$content]['label'] . "' class='btn btn-cta " . $layout . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";  
+    $output = "<a data-template='" . $args[$content]['template'] . "' role='button' data-target='#modal' data-toggle='modal' data-title='" . $args[$content]['label'] . "' class='btn btn-cta " . $layout . "' title='" . $args[$content]['label'] . "'><i class='fa fa-" . $args[$content]['fa-icon'] . " fa-fw'></i>" . $args[$content]['label'] . "</a>";  
   }
 
   return $output;

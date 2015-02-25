@@ -7,12 +7,6 @@ if ( !defined( 'ABSPATH' ) )
 
 $layout = get_field('post_switch_type');
 
-/*if ($layout) : ?>
-<?php var_dump(get_field('post_paragraphs')); ?>
-<?php else : ?>
-<?php the_field('post_contents'); ?>
-<?php endif;*/
-
 if (have_rows('post_paragraphs')) {
 	get_template_part('templates/blocks/post/post', 'list-of-contents');
 	$counter = 0;

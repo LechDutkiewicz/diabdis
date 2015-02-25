@@ -13,7 +13,7 @@ if ( !defined( 'ABSPATH' ) )
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+      <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="<?php _e( 'Go to home page', 'roots'); ?>"><?php bloginfo('name'); ?></a>
     </div>
 
     <nav class="collapse navbar-collapse navbar-right" role="navigation" aria-labelledby="primaryLabel">

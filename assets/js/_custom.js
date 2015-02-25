@@ -199,7 +199,7 @@ $(document).ready(function(){
   * SCROLL TO TOP
   */
 
-  /*var scrlTop=$('#scroll-top');
+  var scrlTop=$('#scroll-top');
   $(window).scroll(function(){
     if($(window).scrollTop()<10){
       scrlTop.fadeOut();
@@ -220,7 +220,7 @@ $(document).ready(function(){
       scrollTop:0
     },300);
     return false;
-  });*/
+  });
 
 /*
 * SIDEBAR POSITIONING

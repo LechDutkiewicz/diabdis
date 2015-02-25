@@ -67,6 +67,6 @@ if ( !defined( 'ABSPATH' ) )
 
 </footer>
 
-<!--<div id="scroll-top" class="text-center">
-	<span class="hidden text-uppercase margin right-small"><?php _e( 'Scroll to top', 'roots'); ?></span><i class="fa fa-chevron-up fa-2x"></i>
-</div>-->
+<div id="scroll-top" class="text-center" title="<?php _e( 'Scroll to top', 'roots'); ?>">
+	<i class="fa fa-chevron-up fa-2x"></i><span class="hidden text-uppercase margin left-small"><?php _e( 'Scroll to top', 'roots'); ?></span>
+</div>
