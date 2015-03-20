@@ -67,9 +67,13 @@ function render_category_link($categories = null, $menuLayout = null, $layout = 
     $categories = get_the_category();
   }
 
+  if (!$menuLayout && count($categories) > 1) {
+    $list = true;
+  }
+
   foreach ($categories as $category) :
 
-    $link = get_category_link($category->term_id);
+  $link = get_category_link($category->term_id);
   $title = $category->name;
   $slug = $category->slug;
   $color = get_field('cat_color', "{$category->taxonomy}_{$category->term_id}");
@@ -77,17 +81,23 @@ function render_category_link($categories = null, $menuLayout = null, $layout = 
 
   $output = '';
 
-  if($menuLayout) {
+  if ($menuLayout) {
     $currentCat = get_current_category();
     $active = ($currentCat->name == $category->name) ? ' active' : '';
     $output .= "<li class='text-center" . $active ." " . $slug . "'>";
   }
+
+  if ($list)
+    $output .= "<li>";
 
   $output .= "<a class='cat-link " . $slug . " " . $layout . "' href='" . $link . "' title='" . __( 'Read more posts in category', 'roots') . " " . $title . "'>";
   $output .= $icon . "<span class='cap'>" . $title . "</span>";
   $output .= "</a>";
 
   if($menuLayout)
+    $output .= "</li>";
+
+  if ($list)
     $output .= "</li>";
 
   echo $output;

@@ -21,7 +21,7 @@ if ( !defined( 'ABSPATH' ) )
 </form>-->
 
 <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
+<!--<div id="mc_embed_signup">
   <form action="//diabdis.us3.list-manage.com/subscribe/post?u=7462c2de238ac1df080b404af&amp;id=368806601f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate styled-form" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 
@@ -46,13 +46,13 @@ if ( !defined( 'ABSPATH' ) )
       <div id="mce-responses" class="clear">
         <div class="response" id="mce-error-response" style="display:none"></div>
         <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      </div>
       <div style="position: absolute; left: -5000px;"><input type="text" name="b_7462c2de238ac1df080b404af_368806601f" tabindex="-1" value=""></div>
       <div class="clear"><input type="submit" value="<?php _e( 'Send application', 'roots'); ?>" name="subscribe" id="mc-embedded-subscribe" class="btn btn-cta btn-blue"></div>
     </div>
   </form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+</div> -->
+<!--<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>
 (function($) {
   window.fnames = new Array();
@@ -84,6 +84,53 @@ if ( !defined( 'ABSPATH' ) )
 
 }(jQuery));
 var $mcj = jQuery.noConflict(true);
-</script>
+</script> -->
 
 <!--End mc_embed_signup-->
+
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="//diabdis.us3.list-manage.com/subscribe/post?u=7462c2de238ac1df080b404af&amp;id=368806601f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate styled-form" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+      <div class="indicates-required"><span class="asterisk">*</span><?php _e( 'indicates required', 'roots'); ?></div>
+      <div class="mc-field-group">
+        <label for="mce-EMAIL"><?php _e( 'Your e-mail', 'roots'); ?><span class="asterisk">*</span>
+        </label>
+        <input type="email" name="EMAIL" class="focus" id="EMAIL">
+      </div>
+      <div class="mc-field-group">
+        <label for="mce-MMERGE3"><?php _e( 'Phone number', 'roots'); ?></label>
+        <input type="text" name="MMERGE3" id="MMERGE3">
+      </div>
+      <div class="mc-field-group">
+        <span class="label margin top">
+          <input type="checkbox" name="rules" id="rules">
+          <label for="rules">
+            <?php _e( 'Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z realizacją usługi świadczonej drogą elektroniczną, obsługą ew. reklamacji oraz przesyłaniem informacji o nowościach i ofertach specjalnych na Twój e-mail. Każda osoba ma prawo wglądu w swoje dane i możliwość ich poprawienia. Podanie danych ma charakter dobrowolny chodź niezbędny, by móc dokonać rejestracji w systemie Diabdis.com<br>Administratorem danych jest Diabdis Sp. z.o.o. z siedzibą w Katowicach przy ul. Kopernika 4/7.', 'roots'); ?>
+          </label>
+        </span>
+      </div>
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_7462c2de238ac1df080b404af_368806601f" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="<?php _e( 'Send application', 'roots'); ?>" name="subscribe" id="mc-embedded-subscribe" class="btn btn-cta btn-blue"></div>
+    </div>
+  </form>
+</div>
+
+<!--<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+(function($) {
+  $(document).ready(function(){
+    $("#mc-embedded-subscribe-form").validate({
+      rules: {
+        EMAIL: "required",
+        MMERGE3: "required",
+        rules: "required"
+      },
+      messages: {
+        EMAIL: "<?php _e( 'Please type correct email address.', 'roots'); ?>"
+      }
+    });
+  });
+}(jQuery));
+</script>-->

@@ -7,74 +7,82 @@ if ( !defined( "ABSPATH" ) )
 
 <div class="row featured-content">
 
-<?php
+	<?php
 
-if (is_category()) {
+	if (is_category()) {
 
-	$currentCat = get_current_category();
-	$featured = get_field("featured_posts_cat_" . $currentCat->term_id, "options");
+		$currentCat = get_current_category();
+		$featured = get_field("featured_posts_cat_" . $currentCat->term_id, "options");
 
-	$featPosts = array();
+		if (is_array($featured)) {
+			$featuredPosts = array_filter($featured);
+		}
 
-	foreach ( $featured as $post ) {
-		$featPosts[] = $post["featured_post"]->ID; 
-	}
+		if (!empty($featuredPosts)) {
 
-	$featQuery = new WP_Query (
-		array(
-			"post__in" => $featPosts,
-			"posts_per_page" => -1,
-			)
-		);
+			$featPosts = array();
 
-	if ( $featQuery->have_posts() ) {
+			foreach ( $featured as $post ) {
+				$featPosts[] = $post["featured_post"]->ID; 
+			}
 
-		while ( $featQuery->have_posts() ) {
+			$featQuery = new WP_Query (
+				array(
+					"post__in" => $featPosts,
+					"posts_per_page" => -1,
+					)
+				);
 
-			$featQuery->the_post(); ?>
+			if ( $featQuery->have_posts() ) {
 
-			<div class="col-md-6">
-				<?php get_template_part("templates/content", "featured"); ?>
-			</div>
+				while ( $featQuery->have_posts() ) {
 
-		<?php }
+					$featQuery->the_post(); ?>
 
-		wp_reset_postdata();
+					<div class="col-md-6">
+						<?php get_template_part("templates/content", "featured"); ?>
+					</div>
 
-	}
+					<?php }
 
-} elseif (is_home()) {
+					wp_reset_postdata();
 
-	$featured = get_field("featured_posts", "options");
+				}
 
-	$featPosts = array();
+			}
 
-	foreach ( $featured as $post ) {
-		$featPosts[] = $post["featured_post"]->ID; 
-	}
+		} elseif (is_home()) {
 
-	$featQuery = new WP_Query (
-		array(
-			"post__in" => $featPosts,
-			"posts_per_page" => -1,
-			)
-		);
+			$featured = get_field("featured_posts", "options");
 
-	if ( $featQuery->have_posts() ) {
+			$featPosts = array();
 
-		while ( $featQuery->have_posts() ) {
+			foreach ( $featured as $post ) {
+				$featPosts[] = $post["featured_post"]->ID; 
+			}
 
-			$featQuery->the_post(); ?>
+			$featQuery = new WP_Query (
+				array(
+					"post__in" => $featPosts,
+					"posts_per_page" => -1,
+					)
+				);
 
-			<div class="col-md-6">
-				<?php get_template_part("templates/content", "featured"); ?>
-			</div>
+			if ( $featQuery->have_posts() ) {
 
-		<?php }
+				while ( $featQuery->have_posts() ) {
 
-		wp_reset_postdata();
+					$featQuery->the_post(); ?>
 
-	}
-} ?>
+					<div class="col-md-6">
+						<?php get_template_part("templates/content", "featured"); ?>
+					</div>
 
-</div>
+					<?php }
+
+					wp_reset_postdata();
+
+				}
+			} ?>
+
+		</div>

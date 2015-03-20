@@ -9,7 +9,8 @@ class Social_Counter {
 	 *
 	 */
 	public $allowed_socials = array(
-		'facebook' => 'http://www.facebook.com/sharer/sharer.php?u={link}&t={title}',
+		//'facebook' => 'http://www.facebook.com/sharer/sharer.php?u={link}&t={title}',
+		'facebook' => 'http://www.facebook.com/sharer/share.php?u={link}',
 		'twitter' => 'http://twitter.com/share?text={title}&url={link}',
 		'google-plus' => 'https://plus.google.com/share?url={link}',
 		'stumbleupon' => 'http://www.stumbleupon.com/submit?url={link}&title={title}',

@@ -10,7 +10,9 @@ if ( !defined( 'ABSPATH' ) )
 			<a href="<?php the_permalink(); ?>" title="<?php echo __( 'Read more', 'roots') . " " . __( 'about', 'roots') . " '" . get_the_title() . "'"; ?>">
 				<h3 class="entry-title"><?php the_title(); ?></h3>
 			</a>
-			<?php render_category_link( null, null, 'feed' ); ?>
+			<ol class="category-links">
+				<?php render_category_link( null, null, 'feed' ); ?>
+			</ol>
 		</header>
 		<div class="feat-img col-lg-3 col-md-3 col-sm-4 col-xs-4">
 			<?php get_template_part('templates/blocks/post/post', 'thumb'); ?>

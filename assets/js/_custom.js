@@ -222,6 +222,18 @@ $(document).ready(function(){
     return false;
   });
 
+  
+    /*$("#mc-embedded-subscribe-form").validate({
+      rules: {
+        EMAIL: "required",
+        MMERGE3: "required",
+        rules: "required"
+      },
+      messages: {
+        EMAIL: "<?php _e( 'Please type correct email address.', 'roots'); ?>"
+      }
+    });*/
+
 /*
 * SIDEBAR POSITIONING
 */

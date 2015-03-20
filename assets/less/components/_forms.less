@@ -50,14 +50,35 @@
 	}
 }
 
+ol.category-links{
+	margin: 0;
+	padding: 0;
+	> li {
+		display: inline-block;
+		position: relative;
+		vertical-align: bottom;
+		margin-right: 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
 .featured-article {
 	.featured-image {
 		border-bottom: 1px solid;
-		.cat-link {
-			color: @white;
+		ol.category-links {
 			position: absolute;
 			bottom: 0;
 			left: 0;
+			> li {
+				.mixin-loop(5); 
+			}
+		}
+		.cat-link {
+			position: relative;
+			display: inline-block;
+			color: @white;
 			line-height: 1.875em;
 			padding: 0 @padding-small;
 			.transition(all @transition-ease);

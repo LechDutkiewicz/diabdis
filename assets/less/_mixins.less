@@ -7,3 +7,9 @@
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
 }
+.mixin-loop (@i) when (@i > 0) {
+  &:nth-child(@{i}) {
+    z-index: 1000 - @i;
+  }
+  .mixin-loop(@i - 1);
+}

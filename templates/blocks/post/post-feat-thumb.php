@@ -22,5 +22,7 @@ $author = get_field('post_thumb_author');
 		<?php echo $author;	?>
 	</div>
 <?php endif; ?>
+<ol class="category-links">
 	<?php render_category_link(); ?>
+</ol>
 </div>
